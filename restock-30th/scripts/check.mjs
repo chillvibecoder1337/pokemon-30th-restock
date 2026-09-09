@@ -37,7 +37,10 @@ async function fetchText(url) {
     redirect: "follow",
   });
   let res = first;
-  if (!first.ok && /bol\.com/i.test(url)) {
+  if (
+    !first.ok &&
+    /(bol\.com|amazon\.nl|amazon\.com\.be)/i.test(url)
+  ) {
     res = await fetch(url, {
       headers: requestHeaders(BROWSER_UA),
       redirect: "follow",
@@ -146,10 +149,14 @@ function decodeEntities(value) {
 function isPokemon30Name(name) {
   const text = decodeEntities(name || "").replace(/[-_]+/g, " ");
   if (!/pok[eéè]mon/i.test(text)) return false;
-  if (/\b25th\b/i.test(text)) return false;
-  if (/\bcelebrations\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
-  if (/\b30\s*kaarten\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
-  return /\b30th\b|\b30[\s-]?jarig|\b30 jaar\b|\b30[\s-]year\b|\bthirtieth\b/i.test(
+  if (/\b25th\b|\b25e\b|\b25ste\b/i.test(text)) return false;
+  if (/\bcelebrations\b/i.test(text) && !/\b30th\b|\b30e\b/i.test(text)) {
+    return false;
+  }
+  if (/\b30\s*kaarten\b/i.test(text) && !/\b30th\b|\b30e\b/i.test(text)) {
+    return false;
+  }
+  return /\b30th\b|\b30e\b|\b30ème\b|\b30eme\b|\b30ste\b|\b30[\s-]?jarig|\b30 jaar\b|\b30[\s-]year\b|\bthirtieth\b/i.test(
     text,
   );
 }
@@ -457,6 +464,193 @@ async function checkBol(target) {
   );
 }
 
+function amazonHost(target) {
+  return (
+    target.host ||
+    (target.shop === "amazon-be" ? "www.amazon.com.be" : "www.amazon.nl")
+  );
+}
+
+function amazonProductUrl(host, asin) {
+  return `https://${host}/dp/${asin}`;
+}
+
+function isAmazonBlocked(html) {
+  return (
+    /validateCaptcha|opene?search.*robot|sorry, we just need to make sure you.re not a robot/i.test(
+      html,
+    ) && !/data-component-type="s-search-result"/i.test(html)
+  );
+}
+
+function amazonStockFromChunk(chunk) {
+  const oos =
+    /Momenteel niet verkrijgbaar|Tijdelijk niet beschikbaar|Currently unavailable|Temporarily out of stock|Niet op voorraad/i.test(
+      chunk,
+    );
+  if (oos) return false;
+  return /Op voorraad|In stock|Nog slechts \d+|Only \d+ left on stock|In winkelwagen|Add to cart|Add to Basket/i.test(
+    chunk,
+  );
+}
+
+function parseAmazonSearchHtml(html, target) {
+  const host = amazonHost(target);
+  const shop = target.shop;
+  const rows = [];
+  const seen = new Set();
+  const starts = [
+    ...html.matchAll(
+      /<div role="listitem" data-asin="([A-Z0-9]{10})"[^>]*data-component-type="s-search-result"/gi,
+    ),
+  ];
+  for (let i = 0; i < starts.length; i++) {
+    const asin = starts[i][1];
+    if (seen.has(asin)) continue;
+    const from = starts[i].index;
+    const next = i + 1 < starts.length ? starts[i + 1].index : from + 16000;
+    const chunk = html.slice(from, Math.min(next, from + 16000));
+    const heading = chunk.match(/<h2[^>]*>[\s\S]*?<\/h2>/i);
+    const name = heading
+      ? decodeEntities(heading[0].replace(/<[^>]+>/g, " ")).replace(
+          /\s+/g,
+          " ",
+        )
+      : "";
+    if (!isPokemon30Name(name)) continue;
+    seen.add(asin);
+    const inStock = amazonStockFromChunk(chunk);
+    rows.push(
+      item({
+        id: `${shop}-${asin}`,
+        shop,
+        name,
+        url: amazonProductUrl(host, asin),
+        inStock,
+        note: inStock
+          ? "Amazon search: op voorraad"
+          : "Amazon listing — open for live stock",
+      }),
+    );
+  }
+  return rows;
+}
+
+function parseDdgAmazon(html, target) {
+  const host = amazonHost(target);
+  const shop = target.shop;
+  const hostRe = host.replace(/\./g, "\\.");
+  const rows = [];
+  const seen = new Set();
+  const titles = new Map();
+  const titleRe = new RegExp(
+    `<h2 class="result__title">[\\s\\S]*?</h2>[\\s\\S]*?${hostRe}[^\\s"']*/dp/([A-Z0-9]{10})`,
+    "gi",
+  );
+  for (const block of html.matchAll(titleRe)) {
+    const heading = block[0].match(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i);
+    const name = heading
+      ? decodeEntities(heading[1].replace(/<[^>]+>/g, ""))
+      : "";
+    if (name) titles.set(block[1], name);
+  }
+  const add = (asin) => {
+    if (!asin || seen.has(asin)) return;
+    const title = titles.get(asin) || "";
+    if (!isPokemon30Name(title)) return;
+    seen.add(asin);
+    rows.push(
+      item({
+        id: `${shop}-${asin}`,
+        shop,
+        name: title,
+        url: amazonProductUrl(host, asin),
+        inStock: false,
+        note: "Found via search — Amazon blocks bot stock checks; open the page",
+      }),
+    );
+  };
+  const plainRe = new RegExp(`${hostRe}[^\\s"']*/dp/([A-Z0-9]{10})`, "gi");
+  let match;
+  while ((match = plainRe.exec(html))) add(match[1]);
+  const uddgRe = /uddg=([^&"']+)/gi;
+  while ((match = uddgRe.exec(html))) {
+    let decoded = match[1];
+    try {
+      decoded = decodeURIComponent(decoded);
+    } catch {
+      /* keep raw */
+    }
+    const product = decoded.match(/\/dp\/([A-Z0-9]{10})/i);
+    if (product) add(product[1]);
+  }
+  return rows;
+}
+
+async function checkAmazonViaDdg(target) {
+  const host = amazonHost(target);
+  const queries = target.searchQueries || [
+    "pokemon 30th celebration",
+    "pokemon 30th",
+    "pokemon 30 jaar",
+    "pokemon 30e verjaardag",
+  ];
+  const seen = new Set();
+  const rows = [];
+  for (const query of queries) {
+    const ddg = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(`site:${host} ${query}`)}`;
+    try {
+      const { text } = await fetchText(ddg);
+      for (const row of parseDdgAmazon(text, target)) {
+        if (seen.has(row.id)) continue;
+        seen.add(row.id);
+        rows.push(row);
+      }
+    } catch {
+      /* DDG is a fallback index */
+    }
+    await sleep(400);
+  }
+  return rows;
+}
+
+async function checkAmazon(target) {
+  const host = amazonHost(target);
+  const searchUrl =
+    target.url ||
+    `https://${host}/s?k=pokemon+30th+celebration`;
+  const shopLabel = target.shop === "amazon-be" ? "Amazon BE" : "Amazon NL";
+  try {
+    const { text } = await fetchText(searchUrl);
+    if (isAmazonBlocked(text)) {
+      throw new Error(`${shopLabel} showed a robot check`);
+    }
+    const listed = parseAmazonSearchHtml(text, target);
+    if (listed.length) return listed;
+  } catch (err) {
+    const viaDdg = await checkAmazonViaDdg(target);
+    if (viaDdg.length) {
+      return viaDdg.map((row) =>
+        item({
+          ...row,
+          note: `${row.note} (${err.message})`,
+        }),
+      );
+    }
+    return emptyScan(
+      target,
+      `${shopLabel} blocked bots (${err.message}). No 30th product URLs in the search index this round`,
+    );
+  }
+
+  const viaDdg = await checkAmazonViaDdg(target);
+  if (viaDdg.length) return viaDdg;
+  return emptyScan(
+    target,
+    `No Pokémon 30th listings found on ${shopLabel} yet (search scraped)`,
+  );
+}
+
 async function checkAw2(target) {
   const { text } = await fetchText(
     target.apiUrl || "https://aw2spzoo.com/api/products",
@@ -519,16 +713,25 @@ async function checkTarget(target) {
     return checkBol(target);
   }
 
+  if (target.shop === "amazon-nl" || target.shop === "amazon-be") {
+    return checkAmazon(target);
+  }
+
   throw new Error(`Unknown shop: ${target.shop}`);
 }
 
 function restockAlerts(previousItems, currentItems) {
   const before = new Map((previousItems || []).map((row) => [row.id, row]));
+  const knownShops = new Set((previousItems || []).map((row) => row.shop));
   const alerts = [];
   for (const row of currentItems) {
     const prev = before.get(row.id);
     if (!row.inStock) continue;
-    if (!prev || prev.inStock === false) {
+    if (!prev) {
+      if (knownShops.has(row.shop)) alerts.push(row);
+      continue;
+    }
+    if (prev.inStock === false) {
       alerts.push(row);
     }
   }

@@ -1,6 +1,6 @@
 # restock30pkmn checker
 
-Personal, $0 monitor for Cardland, AW2, TrueCollector, and Bol.com. GitHub Actions checks public stock every **10 minutes** on a **public** repo. GitHub Pages hosts the dashboard. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
+Personal, $0 monitor for Cardland, AW2, TrueCollector, Bol.com, Amazon Nederland, and Amazon België. GitHub Actions checks public stock every **10 minutes** on a **public** repo. GitHub Pages hosts the dashboard. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
 
 This is a monitor plus open-the-page helper, not a checkout bot.
 
@@ -43,6 +43,7 @@ Every enabled shop is scraped for **Pokémon 30th** names (`30th`, `30 jaar`, `3
 - **Cardland** — Quickbutik JSON search (`/en/shop/search?s=…&out=json`) plus the Pokémon category page.
 - **TrueCollector** — 30th category page. Buyable listings (`Do koszyka`) count as in stock, including presale. `ProduktBezZakupu` is out of stock. Their shop sometimes shows a wait page; the checker retries once with a browser User-Agent.
 - **Bol.com** — search page when the IP is allowed; otherwise DuckDuckGo `site:bol.com` as a listing fallback. Bol often returns HTTP 403 to datacenter IPs (including GitHub Actions), so stock on Bol can be “open the page” until Bol unblocks.
+- **Amazon NL** (`amazon.nl`) and **Amazon BE** (`amazon.com.be`) — search results named Pokémon 30th / 30e verjaardag. Amazon often serves a robot check from GitHub; then DuckDuckGo `site:amazon.nl` / `site:amazon.com.be` is the listing fallback. Stock is only marked in stock when the search card says so; otherwise open the product page.
 
 If a shop has no 30th products yet, the dashboard shows that scrape result instead of a disabled row.
 

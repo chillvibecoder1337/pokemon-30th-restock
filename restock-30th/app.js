@@ -25,10 +25,14 @@ function decodeEntities(value) {
 function isPokemon30Name(name) {
   const text = decodeEntities(name || "").replace(/[-_]+/g, " ");
   if (!/pok[eéè]mon/i.test(text)) return false;
-  if (/\b25th\b/i.test(text)) return false;
-  if (/\bcelebrations\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
-  if (/\b30\s*kaarten\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
-  return /\b30th\b|\b30[\s-]?jarig|\b30 jaar\b|\b30[\s-]year\b|\bthirtieth\b/i.test(
+  if (/\b25th\b|\b25e\b|\b25ste\b/i.test(text)) return false;
+  if (/\bcelebrations\b/i.test(text) && !/\b30th\b|\b30e\b/i.test(text)) {
+    return false;
+  }
+  if (/\b30\s*kaarten\b/i.test(text) && !/\b30th\b|\b30e\b/i.test(text)) {
+    return false;
+  }
+  return /\b30th\b|\b30e\b|\b30ème\b|\b30eme\b|\b30ste\b|\b30[\s-]?jarig|\b30 jaar\b|\b30[\s-]year\b|\bthirtieth\b/i.test(
     text,
   );
 }
@@ -287,6 +291,114 @@ function parseBolSearchHtml(html) {
   return rows;
 }
 
+function amazonHost(target) {
+  return (
+    target.host ||
+    (target.shop === "amazon-be" ? "www.amazon.com.be" : "www.amazon.nl")
+  );
+}
+
+function parseAmazonSearchHtml(html, target) {
+  const host = amazonHost(target);
+  const shop = target.shop;
+  const rows = [];
+  const seen = new Set();
+  const starts = [
+    ...html.matchAll(
+      /<div role="listitem" data-asin="([A-Z0-9]{10})"[^>]*data-component-type="s-search-result"/gi,
+    ),
+  ];
+  for (let i = 0; i < starts.length; i++) {
+    const asin = starts[i][1];
+    if (seen.has(asin)) continue;
+    const from = starts[i].index;
+    const next = i + 1 < starts.length ? starts[i + 1].index : from + 16000;
+    const chunk = html.slice(from, Math.min(next, from + 16000));
+    const heading = chunk.match(/<h2[^>]*>[\s\S]*?<\/h2>/i);
+    const name = heading
+      ? decodeEntities(heading[0].replace(/<[^>]+>/g, " ")).replace(
+          /\s+/g,
+          " ",
+        )
+      : "";
+    if (!isPokemon30Name(name)) continue;
+    seen.add(asin);
+    const oos =
+      /Momenteel niet verkrijgbaar|Tijdelijk niet beschikbaar|Currently unavailable|Temporarily out of stock|Niet op voorraad/i.test(
+        chunk,
+      );
+    const inStock =
+      !oos &&
+      /Op voorraad|In stock|Nog slechts \d+|In winkelwagen|Add to cart/i.test(
+        chunk,
+      );
+    rows.push(
+      row({
+        id: `${shop}-${asin}`,
+        shop,
+        name,
+        url: `https://${host}/dp/${asin}`,
+        inStock,
+        note: inStock
+          ? "Amazon search: op voorraad"
+          : "Amazon listing — open for live stock",
+      }),
+    );
+  }
+  return rows;
+}
+
+function parseDdgAmazon(html, target) {
+  const host = amazonHost(target);
+  const shop = target.shop;
+  const hostRe = host.replace(/\./g, "\\.");
+  const rows = [];
+  const seen = new Set();
+  const titles = new Map();
+  const titleRe = new RegExp(
+    `<h2 class="result__title">[\\s\\S]*?</h2>[\\s\\S]*?${hostRe}[^\\s"']*/dp/([A-Z0-9]{10})`,
+    "gi",
+  );
+  for (const block of html.matchAll(titleRe)) {
+    const heading = block[0].match(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i);
+    const name = heading
+      ? decodeEntities(heading[1].replace(/<[^>]+>/g, ""))
+      : "";
+    if (name) titles.set(block[1], name);
+  }
+  const add = (asin) => {
+    if (!asin || seen.has(asin)) return;
+    const title = titles.get(asin) || "";
+    if (!isPokemon30Name(title)) return;
+    seen.add(asin);
+    rows.push(
+      row({
+        id: `${shop}-${asin}`,
+        shop,
+        name: title,
+        url: `https://${host}/dp/${asin}`,
+        inStock: false,
+        note: "Found via search — Amazon blocks bot stock checks; open the page",
+      }),
+    );
+  };
+  const plainRe = new RegExp(`${hostRe}[^\\s"']*/dp/([A-Z0-9]{10})`, "gi");
+  let match;
+  while ((match = plainRe.exec(html))) add(match[1]);
+  const uddgRe = /uddg=([^&"']+)/gi;
+  while ((match = uddgRe.exec(html))) {
+    let decoded = match[1];
+    try {
+      decoded = decodeURIComponent(decoded);
+    } catch {
+      /* keep raw */
+    }
+    const product = decoded.match(/\/dp\/([A-Z0-9]{10})/i);
+    if (product) add(product[1]);
+  }
+  return rows;
+}
+
 async function checkTarget(target) {
   if (!target.enabled) {
     return [
@@ -372,6 +484,42 @@ async function checkTarget(target) {
           name: target.label,
           url: target.url || "",
           note: "No Pokémon 30th listings found on Bol yet (search scraped)",
+        }),
+      ];
+    }
+    return rows;
+  }
+  if (target.shop === "amazon-nl" || target.shop === "amazon-be") {
+    const host = amazonHost(target);
+    const shopLabel = target.shop === "amazon-be" ? "Amazon BE" : "Amazon NL";
+    try {
+      const html = await fetchText(
+        target.url || `https://${host}/s?k=pokemon+30th+celebration`,
+      );
+      const listed = parseAmazonSearchHtml(html, target);
+      if (listed.length) return listed;
+    } catch {
+      /* Amazon robot-check; fall through to DuckDuckGo */
+    }
+    const queries = target.searchQueries || ["pokemon 30th celebration"];
+    const seen = new Set();
+    const rows = [];
+    for (const query of queries) {
+      const ddg = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(`site:${host} ${query}`)}`;
+      for (const item of parseDdgAmazon(await fetchText(ddg), target)) {
+        if (seen.has(item.id)) continue;
+        seen.add(item.id);
+        rows.push(item);
+      }
+    }
+    if (!rows.length) {
+      return [
+        row({
+          id: target.id,
+          shop: target.shop,
+          name: target.label,
+          url: target.url || "",
+          note: `No Pokémon 30th listings found on ${shopLabel} yet (search scraped)`,
         }),
       ];
     }

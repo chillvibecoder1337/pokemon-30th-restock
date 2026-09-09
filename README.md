@@ -1,6 +1,6 @@
 # restock30pkmn checker
 
-Public GitHub repo with a GitHub Pages dashboard and stock checks every **10 minutes** for Cardland, AW2, TrueCollector, and Bol.com.
+Public GitHub repo with a GitHub Pages dashboard and stock checks every **10 minutes** for Cardland, AW2, TrueCollector, Bol.com, Amazon Nederland, and Amazon België.
 
 After the first Actions run, open: https://chillvibecoder1337.github.io/pokemon-30th-restock/
 

@@ -36,6 +36,34 @@
       "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
       "searchQueries": ["pokemon 30th celebration", "pokemon 30th", "pokemon 30 jaar"],
       "enabled": true
+    },
+    {
+      "id": "amazon-nl-30th",
+      "shop": "amazon-nl",
+      "label": "Amazon Nederland — Pokémon 30th (search)",
+      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
+      "host": "www.amazon.nl",
+      "searchQueries": [
+        "pokemon 30th celebration",
+        "pokemon 30th",
+        "pokemon 30 jaar",
+        "pokemon 30e verjaardag"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "amazon-be-30th",
+      "shop": "amazon-be",
+      "label": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
+      "host": "www.amazon.com.be",
+      "searchQueries": [
+        "pokemon 30th celebration",
+        "pokemon 30th",
+        "pokemon 30 jaar",
+        "pokemon 30e verjaardag"
+      ],
+      "enabled": true
     }
   ]
 }
