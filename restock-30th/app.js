@@ -57,6 +57,7 @@ function row(partial) {
     stock: partial.stock ?? null,
     note: partial.note || "",
     error: partial.error || null,
+    section: partial.section || "pokemon-30th",
   };
 }
 
@@ -75,24 +76,40 @@ const SHOP_LABELS = {
   bol: "Bol.com",
   "amazon-nl": "Amazon Nederland",
   "amazon-be": "Amazon België",
+  "panini-be": "Panini België",
+};
+
+const SECTION_LABELS = {
+  "pokemon-30th": "Pokémon 30th",
+  "fifa-wc": "FIFA / World Cup",
 };
 
 function shopLabel(shop) {
   return SHOP_LABELS[shop] || String(shop || "Shop");
 }
 
-function groupByShop(listItems) {
-  const groups = [];
-  const indexByShop = new Map();
+function sectionLabel(section) {
+  return SECTION_LABELS[section] || shopLabel(section);
+}
+
+function groupBySectionThenShop(listItems) {
+  const sections = [];
+  const sectionIndex = new Map();
   for (const item of listItems) {
-    const shop = item.shop || "other";
-    if (!indexByShop.has(shop)) {
-      indexByShop.set(shop, groups.length);
-      groups.push({ shop, items: [] });
+    const section = item.section || "pokemon-30th";
+    if (!sectionIndex.has(section)) {
+      sectionIndex.set(section, sections.length);
+      sections.push({ section, shops: [] });
     }
-    groups[indexByShop.get(shop)].items.push(item);
+    const group = sections[sectionIndex.get(section)];
+    let shopGroup = group.shops.find((entry) => entry.shop === item.shop);
+    if (!shopGroup) {
+      shopGroup = { shop: item.shop, items: [] };
+      group.shops.push(shopGroup);
+    }
+    shopGroup.items.push(item);
   }
-  return groups;
+  return sections;
 }
 
 function itemCard(item) {
@@ -128,15 +145,28 @@ function render(status) {
     list.innerHTML = '<p class="note">No items yet. Press Check now.</p>';
     return;
   }
-  list.innerHTML = groupByShop(items)
-    .map((group) => {
-      const inShop = group.items.filter((item) => item.inStock).length;
-      return `<section class="shop-section">
+  list.innerHTML = groupBySectionThenShop(items)
+    .map((theme) => {
+      const themeItems = theme.shops.flatMap((group) => group.items);
+      const inTheme = themeItems.filter((item) => item.inStock).length;
+      const shopsHtml = theme.shops
+        .map((group) => {
+          const inShop = group.items.filter((item) => item.inStock).length;
+          return `<section class="shop-section">
         <div class="shop-heading">
-          <h2>${escapeHtml(shopLabel(group.shop))}</h2>
+          <h3>${escapeHtml(shopLabel(group.shop))}</h3>
           <span class="count">${inShop}/${group.items.length} in stock</span>
         </div>
         ${group.items.map(itemCard).join("")}
+      </section>`;
+        })
+        .join("");
+      return `<section class="theme-section">
+        <div class="theme-heading">
+          <h2>${escapeHtml(sectionLabel(theme.section))}</h2>
+          <span class="count">${inTheme}/${themeItems.length} in stock</span>
+        </div>
+        ${shopsHtml}
       </section>`;
     })
     .join("");
@@ -436,6 +466,53 @@ function parseDdgAmazon(html, target) {
   return rows;
 }
 
+function isFifaWorldCupName(name) {
+  const text = decodeEntities(name || "").replace(/[-_]+/g, " ");
+  if (/ontbrekende/i.test(text)) return false;
+  if (!/2026/.test(text)) return false;
+  if (/fifa\s*365/i.test(text) && !/world\s*cup|wk\s*2026/i.test(text)) {
+    return false;
+  }
+  return /world\s*cup|wereldbeker|\bwk\s*2026\b|fifa\s*world/i.test(text);
+}
+
+function parsePaniniBelgiumHtml(html, target) {
+  const rows = [];
+  const seen = new Set();
+  const re =
+    /id="product-item-info_(\d+)"([\s\S]*?)(?=id="product-item-info_|<\/ol>)/g;
+  let match;
+  while ((match = re.exec(html))) {
+    const id = match[1];
+    const chunk = match[2];
+    if (seen.has(id)) continue;
+    const named = chunk.match(
+      /<a class="product-item-link"\s+href="([^"]+)">\s*([\s\S]*?)<\/a>/i,
+    );
+    if (!named) continue;
+    const name = decodeEntities(named[2].replace(/<[^>]+>/g, " ")).replace(
+      /\s+/g,
+      " ",
+    );
+    if (!isFifaWorldCupName(name)) continue;
+    seen.add(id);
+    const cart = chunk.match(/class="action tocart primary"([\s\S]{0,200}?)>/);
+    const inStock = Boolean(cart && !/\bdisabled\b/i.test(cart[0]));
+    rows.push(
+      row({
+        id: `panini-be-${id}`,
+        shop: "panini-be",
+        name,
+        url: named[1],
+        inStock,
+        note: inStock ? "Panini.be: in winkelwagen" : "Niet op voorraad",
+        section: target.section || "fifa-wc",
+      }),
+    );
+  }
+  return rows;
+}
+
 async function checkTarget(target) {
   if (!target.enabled) {
     return [
@@ -562,6 +639,38 @@ async function checkTarget(target) {
     }
     return rows;
   }
+  if (target.shop === "panini-be") {
+    const base =
+      target.url ||
+      "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html";
+    const seen = new Set();
+    const rows = [];
+    for (let page = 1; page <= 6; page += 1) {
+      const url = `${base}${base.includes("?") ? "&" : "?"}p=${page}`;
+      const listed = parsePaniniBelgiumHtml(await fetchText(url), target);
+      let added = 0;
+      for (const item of listed) {
+        if (seen.has(item.id)) continue;
+        seen.add(item.id);
+        rows.push(item);
+        added += 1;
+      }
+      if (added === 0) break;
+    }
+    if (!rows.length) {
+      return [
+        row({
+          id: target.id,
+          shop: "panini-be",
+          name: target.label,
+          url: target.url || "",
+          note: "No FIFA World Cup 2026 listings on Panini Belgium yet",
+          section: target.section || "fifa-wc",
+        }),
+      ];
+    }
+    return rows;
+  }
   throw new Error(`Unknown shop: ${target.shop}`);
 }
 
@@ -573,7 +682,15 @@ async function runBrowserCheck() {
   const errors = [];
   for (const target of config.targets || []) {
     try {
-      nextItems.push(...(await checkTarget(target)));
+      nextItems.push(
+        ...(await checkTarget(target)).map((item) => ({
+          ...item,
+          section:
+            item.section ||
+            target.section ||
+            (target.shop === "panini-be" ? "fifa-wc" : "pokemon-30th"),
+        })),
+      );
     } catch (err) {
       errors.push(`${target.id}: ${err.message}`);
       nextItems.push(

@@ -64,6 +64,14 @@
         "pokemon 30e verjaardag"
       ],
       "enabled": true
+    },
+    {
+      "id": "panini-be-wc",
+      "shop": "panini-be",
+      "section": "fifa-wc",
+      "label": "Panini België — FIFA World Cup 2026",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html",
+      "enabled": true
     }
   ]
 }

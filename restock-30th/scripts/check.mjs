@@ -1,6 +1,13 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { setDefaultResultOrder } from "node:dns";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+
+setDefaultResultOrder("ipv4first");
+
+const execFileAsync = promisify(execFile);
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TARGETS_PATH = join(ROOT, "config", "targets.json");
@@ -39,7 +46,7 @@ async function fetchText(url) {
   let res = first;
   if (
     !first.ok &&
-    /(bol\.com|amazon\.nl|amazon\.com\.be)/i.test(url)
+    /(bol\.com|amazon\.nl|amazon\.com\.be|paninibelgium)/i.test(url)
   ) {
     res = await fetch(url, {
       headers: requestHeaders(BROWSER_UA),
@@ -181,6 +188,9 @@ function emptyScan(target, note) {
       inStock: false,
       stock: 0,
       note,
+      section:
+        target.section ||
+        (target.shop === "panini-be" ? "fifa-wc" : "pokemon-30th"),
     }),
   ];
 }
@@ -194,6 +204,7 @@ function item({
   stock = null,
   note = "",
   error = null,
+  section = "pokemon-30th",
 }) {
   return {
     id,
@@ -204,6 +215,7 @@ function item({
     stock,
     note,
     error,
+    section,
   };
 }
 
@@ -651,6 +663,107 @@ async function checkAmazon(target) {
   );
 }
 
+function isFifaWorldCupName(name) {
+  const text = decodeEntities(name || "").replace(/[-_]+/g, " ");
+  if (/ontbrekende/i.test(text)) return false;
+  if (!/2026/.test(text)) return false;
+  if (/fifa\s*365/i.test(text) && !/world\s*cup|wk\s*2026/i.test(text)) {
+    return false;
+  }
+  return /world\s*cup|wereldbeker|\bwk\s*2026\b|fifa\s*world/i.test(text);
+}
+
+function parsePaniniBelgiumHtml(html, target) {
+  const rows = [];
+  const seen = new Set();
+  const re =
+    /id="product-item-info_(\d+)"([\s\S]*?)(?=id="product-item-info_|<\/ol>)/g;
+  let match;
+  while ((match = re.exec(html))) {
+    const id = match[1];
+    const chunk = match[2];
+    if (seen.has(id)) continue;
+    const named = chunk.match(
+      /<a class="product-item-link"\s+href="([^"]+)">\s*([\s\S]*?)<\/a>/i,
+    );
+    if (!named) continue;
+    const name = decodeEntities(named[2].replace(/<[^>]+>/g, " ")).replace(
+      /\s+/g,
+      " ",
+    );
+    if (!isFifaWorldCupName(name)) continue;
+    seen.add(id);
+    const cart = chunk.match(/class="action tocart primary"([\s\S]{0,200}?)>/);
+    const inStock = Boolean(cart && !/\bdisabled\b/i.test(cart[0]));
+    rows.push(
+      item({
+        id: `panini-be-${id}`,
+        shop: "panini-be",
+        name,
+        url: named[1],
+        inStock,
+        note: inStock ? "Panini.be: in winkelwagen" : "Niet op voorraad",
+        section: target.section || "fifa-wc",
+      }),
+    );
+  }
+  return rows;
+}
+
+async function fetchPanini(url) {
+  const curlBin = process.platform === "win32" ? "curl.exe" : "curl";
+  const { stdout, stderr } = await execFileAsync(
+    curlBin,
+    [
+      "-sS",
+      "-L",
+      "--compressed",
+      "-A",
+      BROWSER_UA,
+      "-H",
+      "Accept-Language: nl-BE,nl;q=0.9,fr-BE;q=0.8,en;q=0.7",
+      "--max-time",
+      "30",
+      url,
+    ],
+    { maxBuffer: 8_000_000, windowsHide: true },
+  );
+  const text = String(stdout || "");
+  if (!text) {
+    throw new Error(String(stderr || `empty response for ${url}`));
+  }
+  return { text, finalUrl: url };
+}
+
+async function checkPaniniBelgium(target) {
+  const base =
+    target.url ||
+    "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html";
+  const seen = new Set();
+  const rows = [];
+  for (let page = 1; page <= 6; page += 1) {
+    const url = `${base}${base.includes("?") ? "&" : "?"}p=${page}`;
+    const { text } = await fetchPanini(url);
+    const listed = parsePaniniBelgiumHtml(text, target);
+    let added = 0;
+    for (const row of listed) {
+      if (seen.has(row.id)) continue;
+      seen.add(row.id);
+      rows.push(row);
+      added += 1;
+    }
+    if (added === 0) break;
+    await sleep(400);
+  }
+  if (!rows.length) {
+    return emptyScan(
+      target,
+      "No FIFA World Cup 2026 listings on Panini Belgium yet",
+    );
+  }
+  return rows;
+}
+
 async function checkAw2(target) {
   const { text } = await fetchText(
     target.apiUrl || "https://aw2spzoo.com/api/products",
@@ -717,6 +830,10 @@ async function checkTarget(target) {
     return checkAmazon(target);
   }
 
+  if (target.shop === "panini-be") {
+    return checkPaniniBelgium(target);
+  }
+
   throw new Error(`Unknown shop: ${target.shop}`);
 }
 
@@ -738,6 +855,14 @@ function restockAlerts(previousItems, currentItems) {
   return alerts;
 }
 
+function headerSafe(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[^\x20-\x7E]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function alertBody(row) {
   const stock =
     row.stock == null ? "in stock" : `${row.stock} in stock`;
@@ -750,7 +875,7 @@ async function notifyNtfy(row) {
   const res = await fetch(`https://ntfy.sh/${encodeURIComponent(topic)}`, {
     method: "POST",
     headers: {
-      Title: `Restock: ${row.name}`.slice(0, 120),
+      Title: headerSafe(`Restock: ${row.name}`).slice(0, 120),
       Priority: "high",
       Tags: "bell,shopping",
       Click: row.url || "",
@@ -816,7 +941,15 @@ async function main() {
   for (const [index, target] of targets.entries()) {
     try {
       const rows = await checkTarget(target);
-      items.push(...rows);
+      const section =
+        target.section ||
+        (target.shop === "panini-be" ? "fifa-wc" : "pokemon-30th");
+      items.push(
+        ...rows.map((row) => ({
+          ...row,
+          section: row.section || section,
+        })),
+      );
     } catch (err) {
       errors.push(`${target.id}: ${err.message}`);
       items.push(
@@ -828,6 +961,7 @@ async function main() {
           inStock: false,
           error: err.message,
           note: "Check failed",
+          section: target.section || "pokemon-30th",
         }),
       );
     }
