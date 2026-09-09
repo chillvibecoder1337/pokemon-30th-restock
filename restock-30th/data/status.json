@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-09T11:18:09.955Z",
+  "checkedAt": "2026-09-09T11:32:40.322Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,6 +127,6 @@
   "alerts": [],
   "notify": [],
   "github": {
-    "actionsUrl": ""
+    "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
 }
