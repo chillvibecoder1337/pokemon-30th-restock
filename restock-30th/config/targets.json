@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Pokémon 30th restock watcher",
+    "userAgent": "CardOrcaRestockWatcher/1.0 (personal; polite 10min checks)"
+  },
+  "targets": [
+    {
+      "id": "aw2-30th",
+      "shop": "aw2",
+      "label": "AW2 — Pokémon 30th (catalog scan)",
+      "url": "https://aw2spzoo.com/",
+      "apiUrl": "https://aw2spzoo.com/api/products",
+      "match": "30th|celebration",
+      "enabled": true
+    },
+    {
+      "id": "cardland-30th",
+      "shop": "cardland",
+      "label": "Cardland — paste a 30th Celebration product URL",
+      "url": "",
+      "enabled": false
+    },
+    {
+      "id": "truecollector-30th",
+      "shop": "truecollector",
+      "label": "TrueCollector — Pokémon 30th Celebration",
+      "url": "https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html",
+      "match": "30th|celebration",
+      "enabled": true
+    },
+    {
+      "id": "bol-30th",
+      "shop": "bol",
+      "label": "Bol.com — paste a 30th Celebration product URL",
+      "url": "",
+      "enabled": false
+    }
+  ]
+}

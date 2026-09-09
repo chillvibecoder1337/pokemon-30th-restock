@@ -1,0 +1,132 @@
+{
+  "checkedAt": "2026-09-09T11:18:09.955Z",
+  "ok": true,
+  "errors": [],
+  "items": [
+    {
+      "id": "aw2-30th",
+      "shop": "aw2",
+      "name": "AW2 — Pokémon 30th (catalog scan)",
+      "url": "https://aw2spzoo.com/",
+      "inStock": false,
+      "stock": 0,
+      "note": "No catalog match for 30th/Celebration yet",
+      "error": null
+    },
+    {
+      "id": "cardland-30th",
+      "shop": "cardland",
+      "name": "Cardland — paste a 30th Celebration product URL",
+      "url": "",
+      "inStock": false,
+      "stock": null,
+      "note": "Disabled — paste a product URL in config/targets.json and set enabled true",
+      "error": null
+    },
+    {
+      "id": "truecollector-6655",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - 2-Pack PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-2-pack-przedsprzedaz-p-6655.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6657",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-przedsprzedaz-p-6657.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6658",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-przedsprzedaz-p-6658.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6656",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Binder Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-binder-collection-przedsprzedaz-p-6656.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6659",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Mini Tin - MIX Display (10) PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-mini-tin-mix-display-10-przedsprzedaz-p-6659.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6652",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6652.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6654",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Poster Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-poster-collection-przedsprzedaz-p-6654.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6653",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6653.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null
+    },
+    {
+      "id": "truecollector-6651",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Booster Bundle PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-booster-bundle-przedsprzedaz-p-6651.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null
+    },
+    {
+      "id": "bol-30th",
+      "shop": "bol",
+      "name": "Bol.com — paste a 30th Celebration product URL",
+      "url": "",
+      "inStock": false,
+      "stock": null,
+      "note": "Disabled — paste a product URL in config/targets.json and set enabled true",
+      "error": null
+    }
+  ],
+  "alerts": [],
+  "notify": [],
+  "github": {
+    "actionsUrl": ""
+  }
+}

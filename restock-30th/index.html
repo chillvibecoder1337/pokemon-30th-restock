@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokémon 30th restock watcher</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #111318;
+        --card: #1c1f27;
+        --text: #f4f1ea;
+        --muted: #9aa3b2;
+        --line: #2a2f3a;
+        --in: #3d9a6a;
+        --out: #b4534a;
+        --btn: #e8c36a;
+        --btn-text: #1a1408;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.45;
+      }
+      main {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding: 1.25rem 1rem 3rem;
+      }
+      h1 {
+        font-size: 1.35rem;
+        margin: 0 0 0.35rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.25rem;
+      }
+      button,
+      a.btn {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        padding: 0.7rem 1rem;
+        font-weight: 650;
+        text-decoration: none;
+        color: var(--btn-text);
+        background: var(--btn);
+        cursor: pointer;
+        display: inline-block;
+      }
+      a.btn.secondary,
+      button.secondary {
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        padding: 0.95rem 1rem;
+        margin-bottom: 0.75rem;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+      .shop {
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .name {
+        font-weight: 650;
+        margin: 0.15rem 0 0.35rem;
+      }
+      .note {
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+      .badge {
+        flex: none;
+        font-size: 0.75rem;
+        font-weight: 700;
+        border-radius: 999px;
+        padding: 0.25rem 0.55rem;
+      }
+      .badge.in {
+        background: color-mix(in srgb, var(--in) 25%, transparent);
+        color: #8ee0b0;
+      }
+      .badge.out {
+        background: color-mix(in srgb, var(--out) 25%, transparent);
+        color: #f0a8a2;
+      }
+      .error {
+        color: #f0a8a2;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Pokémon 30th restock</h1>
+      <p class="meta" id="checked">Loading status…</p>
+      <div class="actions">
+        <button type="button" id="open-all">Open all in stock</button>
+        <a class="btn secondary" id="check-now" href="#" hidden>Check now</a>
+      </div>
+      <div id="list"></div>
+    </main>
+    <script>
+      const list = document.getElementById("list");
+      const checked = document.getElementById("checked");
+      const openAll = document.getElementById("open-all");
+      const checkNow = document.getElementById("check-now");
+      let items = [];
+
+      function badge(item) {
+        if (item.inStock) {
+          const stock = item.stock == null ? "In stock" : `${item.stock} in stock`;
+          return `<span class="badge in">${stock}</span>`;
+        }
+        return `<span class="badge out">Out of stock</span>`;
+      }
+
+      function render(status) {
+        items = status.items || [];
+        const when = status.checkedAt
+          ? new Date(status.checkedAt).toLocaleString()
+          : "never";
+        const inCount = items.filter((row) => row.inStock).length;
+        checked.textContent = `Last check ${when} · ${inCount}/${items.length} in stock`;
+        if (status.github && status.github.actionsUrl) {
+          checkNow.href = status.github.actionsUrl;
+          checkNow.hidden = false;
+        }
+        if (!items.length) {
+          list.innerHTML =
+            '<p class="note">No items yet. Run <code>node restock-30th/scripts/check.mjs</code> or wait for GitHub Actions.</p>';
+          return;
+        }
+        list.innerHTML = items
+          .map((item) => {
+            const open = item.url
+              ? `<a class="btn secondary" href="${item.url}" target="_blank" rel="noopener">Open</a>`
+              : "";
+            const note = item.note ? `<div class="note">${item.note}</div>` : "";
+            const error = item.error
+              ? `<div class="error">${item.error}</div>`
+              : "";
+            return `<article class="card">
+              <div class="row">
+                <div>
+                  <div class="shop">${item.shop}</div>
+                  <div class="name">${item.name}</div>
+                  ${note}${error}
+                </div>
+                ${badge(item)}
+              </div>
+              <div class="actions" style="margin:0.75rem 0 0">${open}</div>
+            </article>`;
+          })
+          .join("");
+      }
+
+      openAll.addEventListener("click", () => {
+        const urls = items.filter((row) => row.inStock && row.url).map((row) => row.url);
+        if (!urls.length) {
+          alert("Nothing in stock right now.");
+          return;
+        }
+        for (const url of urls) {
+          window.open(url, "_blank", "noopener");
+        }
+      });
+
+      fetch(`./data/status.json?t=${Date.now()}`)
+        .then((res) => {
+          if (!res.ok) throw new Error("status.json missing");
+          return res.json();
+        })
+        .then(render)
+        .catch((err) => {
+          checked.textContent = err.message;
+        });
+    </script>
+  </body>
+</html>
