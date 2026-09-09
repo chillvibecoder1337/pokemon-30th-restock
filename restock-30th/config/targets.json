@@ -10,15 +10,16 @@
       "label": "AW2 — Pokémon 30th (catalog scan)",
       "url": "https://aw2spzoo.com/",
       "apiUrl": "https://aw2spzoo.com/api/products",
-      "match": "30th|celebration",
       "enabled": true
     },
     {
       "id": "cardland-30th",
       "shop": "cardland",
-      "label": "Cardland — paste a 30th Celebration product URL",
-      "url": "",
-      "enabled": false
+      "label": "Cardland — Pokémon 30th (search)",
+      "url": "https://www.cardland.se/en/shop/search?s=30th",
+      "categoryUrl": "https://www.cardland.se/en/pokemon",
+      "searchQueries": ["30th", "pokemon 30th", "30th celebration", "30 year"],
+      "enabled": true
     },
     {
       "id": "truecollector-30th",
@@ -31,9 +32,10 @@
     {
       "id": "bol-30th",
       "shop": "bol",
-      "label": "Bol.com — paste a 30th Celebration product URL",
-      "url": "",
-      "enabled": false
+      "label": "Bol.com — Pokémon 30th (search)",
+      "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
+      "searchQueries": ["pokemon 30th celebration", "pokemon 30th", "pokemon 30 jaar"],
+      "enabled": true
     }
   ]
 }

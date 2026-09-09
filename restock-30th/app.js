@@ -22,6 +22,27 @@ function decodeEntities(value) {
     .trim();
 }
 
+function isPokemon30Name(name) {
+  const text = decodeEntities(name || "").replace(/[-_]+/g, " ");
+  if (!/pok[eéè]mon/i.test(text)) return false;
+  if (/\b25th\b/i.test(text)) return false;
+  if (/\bcelebrations\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
+  if (/\b30\s*kaarten\b/i.test(text) && !/\b30th\b/i.test(text)) return false;
+  return /\b30th\b|\b30[\s-]?jarig|\b30 jaar\b|\b30[\s-]year\b|\bthirtieth\b/i.test(
+    text,
+  );
+}
+
+function absoluteUrl(url, origin) {
+  if (!url) return origin || "";
+  if (/^https?:\/\//i.test(url)) return url;
+  try {
+    return new URL(url, origin || "https://example.com/").href;
+  } catch {
+    return url;
+  }
+}
+
 function row(partial) {
   return {
     id: partial.id,
@@ -104,9 +125,8 @@ async function fetchText(url) {
 
 function parseAw2(text, target) {
   const data = JSON.parse(text);
-  const re = new RegExp(target.match || "30th|celebration", "i");
   const matches = (data.products || []).filter((product) =>
-    re.test(product.name || ""),
+    isPokemon30Name(product.name || ""),
   );
   if (!matches.length) {
     return [
@@ -115,7 +135,7 @@ function parseAw2(text, target) {
         shop: "aw2",
         name: target.label,
         url: target.url,
-        note: "No catalog match for 30th/Celebration yet",
+        note: "No Pokémon 30th listings in AW2 catalog yet",
       }),
     ];
   }
@@ -169,58 +189,102 @@ function parseTrueCollector(html, target) {
   return rows;
 }
 
-function parseCardland(html, url, target) {
-  const raw = html.match(
-    /var qs_store_apps_data = (\{[\s\S]*?\}); var qs_store_apps/,
-  );
-  if (raw) {
-    const data = JSON.parse(raw[1]);
-    const product = data.product || {};
+function parseCardlandJson(text, origin) {
+  const data = JSON.parse(text);
+  const rows = [];
+  const seen = new Set();
+  for (const entry of data.searchresults || []) {
+    const product = entry.product || {};
+    if (!product.id || seen.has(String(product.id))) continue;
+    if (!isPokemon30Name(product.title)) continue;
+    seen.add(String(product.id));
     const stock = Number(product.stock);
-    return [
+    rows.push(
       row({
-        id: target.id,
+        id: `cardland-${product.id}`,
         shop: "cardland",
-        name: product.title || target.label,
-        url,
-        inStock: Number.isFinite(stock) ? stock > 0 : false,
+        name: product.title,
+        url: absoluteUrl(product.url, origin),
+        inStock: Boolean(product.has_stock) && !product.soldOut,
         stock: Number.isFinite(stock) ? stock : null,
+        note: product.price || "",
       }),
-    ];
+    );
   }
-  return [
-    row({
-      id: target.id,
-      shop: "cardland",
-      name: target.label,
-      url,
-      inStock: /in stock|köpbar produkt/i.test(html),
-    }),
-  ];
+  return rows;
 }
 
-function parseBol(html, url, target) {
-  const titleMatch = html.match(/<title>([^<]+)<\/title>/i);
-  const name = titleMatch
-    ? decodeEntities(titleMatch[1].replace(/\s*[\|–-]\s*bol\.com.*$/i, ""))
-    : target.label;
-  const availability = html.match(
-    /"availability"\s*:\s*"(?:https?:\/\/schema\.org\/)?([^"]+)"/i,
-  );
-  const oos = /niet leverbaar|niet op voorraad|outofstock/i.test(html);
-  const buy = /in winkelwagen|toevoegen aan winkelwagen/i.test(html);
-  let inStock = availability
-    ? /InStock|LimitedAvailability/i.test(availability[1])
-    : buy && !oos;
-  return [
-    row({
-      id: target.id,
-      shop: "bol",
-      name,
-      url,
-      inStock,
-    }),
-  ];
+function parseDdgBol(html) {
+  const rows = [];
+  const seen = new Set();
+  const titles = new Map();
+  for (const block of html.matchAll(
+    /<h2 class="result__title">[\s\S]*?<\/h2>[\s\S]*?www\.bol\.com\/nl\/nl\/p\/([a-z0-9-]+)\/(\d{10,})\//gi,
+  )) {
+    const heading = block[0].match(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i);
+    const name = heading
+      ? decodeEntities(heading[1].replace(/<[^>]+>/g, ""))
+      : block[1].replace(/-/g, " ");
+    titles.set(block[2], name);
+  }
+  const add = (slug, id) => {
+    if (!slug || !id || seen.has(id)) return;
+    const slugName = slug.replace(/-/g, " ");
+    if (!isPokemon30Name(slugName)) return;
+    seen.add(id);
+    const title = titles.get(id) || "";
+    rows.push(
+      row({
+        id: `bol-${id}`,
+        shop: "bol",
+        name: isPokemon30Name(title) ? title : slugName,
+        url: `https://www.bol.com/nl/nl/p/${slug}/${id}/`,
+        inStock: false,
+        note: "Found via search — Bol blocks bot stock checks; open the page",
+      }),
+    );
+  };
+  let match;
+  const plainRe = /www\.bol\.com\/nl\/nl\/p\/([a-z0-9-]+)\/(\d{10,})\//gi;
+  while ((match = plainRe.exec(html))) add(match[1], match[2]);
+  const uddgRe = /uddg=([^&"']+)/gi;
+  while ((match = uddgRe.exec(html))) {
+    let decoded = match[1];
+    try {
+      decoded = decodeURIComponent(decoded);
+    } catch {
+      /* keep raw */
+    }
+    const product = decoded.match(
+      /bol\.com\/nl\/nl\/p\/([a-z0-9-]+)\/(\d{10,})/i,
+    );
+    if (product) add(product[1], product[2]);
+  }
+  return rows;
+}
+
+function parseBolSearchHtml(html) {
+  const rows = [];
+  const seen = new Set();
+  const re = /\/nl\/nl\/p\/([a-z0-9-]+)\/(\d{10,})\//gi;
+  let match;
+  while ((match = re.exec(html))) {
+    const slug = match[1];
+    const id = match[2];
+    if (seen.has(id)) continue;
+    const name = slug.replace(/-/g, " ");
+    if (!isPokemon30Name(name)) continue;
+    seen.add(id);
+    rows.push(
+      row({
+        id: `bol-${id}`,
+        shop: "bol",
+        name,
+        url: `https://www.bol.com/nl/nl/p/${slug}/${id}/`,
+      }),
+    );
+  }
+  return rows;
 }
 
 async function checkTarget(target) {
@@ -231,7 +295,7 @@ async function checkTarget(target) {
         shop: target.shop,
         name: target.label,
         url: target.url || "",
-        note: "Disabled — paste a product URL in config/targets.json and set enabled true",
+        note: "Turned off in config/targets.json",
       }),
     ];
   }
@@ -249,19 +313,70 @@ async function checkTarget(target) {
     }
     return parseTrueCollector(html, target);
   }
-  if (!target.url) {
-    return [
-      row({
-        id: target.id,
-        shop: target.shop,
-        name: target.label,
-        note: "No URL yet",
-      }),
-    ];
+  if (target.shop === "cardland") {
+    const queries = target.searchQueries || ["30th", "pokemon 30th"];
+    const seen = new Set();
+    const rows = [];
+    for (const query of queries) {
+      const searchUrl = `https://www.cardland.se/en/shop/search?s=${encodeURIComponent(query)}&out=json&limit=50`;
+      const parsed = parseCardlandJson(
+        await fetchText(searchUrl),
+        "https://www.cardland.se/en/",
+      );
+      for (const item of parsed) {
+        if (seen.has(item.id)) continue;
+        seen.add(item.id);
+        rows.push(item);
+      }
+    }
+    if (!rows.length) {
+      return [
+        row({
+          id: target.id,
+          shop: "cardland",
+          name: target.label,
+          url: target.url || "",
+          note: "No Pokémon 30th listings on Cardland yet (search scraped)",
+        }),
+      ];
+    }
+    return rows;
   }
-  const html = await fetchText(target.url);
-  if (target.shop === "cardland") return parseCardland(html, target.url, target);
-  if (target.shop === "bol") return parseBol(html, target.url, target);
+  if (target.shop === "bol") {
+    try {
+      const html = await fetchText(
+        target.url ||
+          "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
+      );
+      const listed = parseBolSearchHtml(html);
+      if (listed.length) return listed;
+    } catch {
+      /* Bol often 403s; fall through to DuckDuckGo */
+    }
+    const queries = target.searchQueries || ["pokemon 30th celebration"];
+    const seen = new Set();
+    const rows = [];
+    for (const query of queries) {
+      const ddg = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(`site:bol.com/nl ${query}`)}`;
+      for (const item of parseDdgBol(await fetchText(ddg))) {
+        if (seen.has(item.id)) continue;
+        seen.add(item.id);
+        rows.push(item);
+      }
+    }
+    if (!rows.length) {
+      return [
+        row({
+          id: target.id,
+          shop: "bol",
+          name: target.label,
+          url: target.url || "",
+          note: "No Pokémon 30th listings found on Bol yet (search scraped)",
+        }),
+      ];
+    }
+    return rows;
+  }
   throw new Error(`Unknown shop: ${target.shop}`);
 }
 

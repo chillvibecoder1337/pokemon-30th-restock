@@ -35,25 +35,16 @@ You can set one or both. Missing secrets are skipped.
 
 Cron is every 10 minutes (`*/10 * * * *`). GitHub can delay scheduled jobs.
 
-## Add Cardland / Bol product URLs
+## Shops
 
-Edit `config/targets.json`:
+Every enabled shop is scraped for **Pokémon 30th** names (`30th`, `30 jaar`, `30-year`). No product URL paste needed.
 
-```json
-{
-  "id": "cardland-30th",
-  "shop": "cardland",
-  "label": "Cardland ETB",
-  "url": "https://www.cardland.se/en/all-sealed/YOUR-30TH-SLUG",
-  "enabled": true
-}
-```
+- **AW2** — public catalog API, names matching Pokémon 30th.
+- **Cardland** — Quickbutik JSON search (`/en/shop/search?s=…&out=json`) plus the Pokémon category page.
+- **TrueCollector** — 30th category page. Buyable listings (`Do koszyka`) count as in stock, including presale. `ProduktBezZakupu` is out of stock. Their shop sometimes shows a wait page; the checker retries once with a browser User-Agent.
+- **Bol.com** — search page when the IP is allowed; otherwise DuckDuckGo `site:bol.com` as a listing fallback. Bol often returns HTTP 403 to datacenter IPs (including GitHub Actions), so stock on Bol can be “open the page” until Bol unblocks.
 
-Same for Bol (`shop`: `"bol"`). AW2 scans its public catalog for names matching `30th|celebration` and needs no product URL.
-
-TrueCollector uses the 30th category page (`pokemon-30th-celebration-c-1_77.html`). Buyable listings (`Do koszyka`) count as in stock, including presale. `ProduktBezZakupu` / Aktualnie niedostępny is out of stock. Their shop sometimes shows a wait page; the checker retries once with a browser User-Agent.
-
-Bol.com often returns HTTP 403 to datacenter IPs (including GitHub Actions). The checker retries once with a browser User-Agent and shows the error on the dashboard if it is still blocked.
+If a shop has no 30th products yet, the dashboard shows that scrape result instead of a disabled row.
 
 ## Run locally
 
