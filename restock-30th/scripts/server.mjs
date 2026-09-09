@@ -78,5 +78,5 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, "127.0.0.1", () => {
-  console.log(`Restock dashboard http://127.0.0.1:${PORT}/`);
+  console.log(`restock30pkmn checker http://127.0.0.1:${PORT}/`);
 });

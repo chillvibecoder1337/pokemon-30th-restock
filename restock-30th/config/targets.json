@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Pokémon 30th restock watcher",
-    "userAgent": "CardOrcaRestockWatcher/1.0 (personal; polite 10min checks)"
+    "title": "restock30pkmn checker",
+    "userAgent": "Restock30pkmnChecker/1.0 (personal; polite 10min checks)"
   },
   "targets": [
     {

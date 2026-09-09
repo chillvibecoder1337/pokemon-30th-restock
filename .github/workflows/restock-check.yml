@@ -1,4 +1,4 @@
-name: Restock check
+name: restock30pkmn checker
 
 on:
   schedule:

@@ -6,7 +6,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TARGETS_PATH = join(ROOT, "config", "targets.json");
 const STATUS_PATH = join(ROOT, "data", "status.json");
 const USER_AGENT =
-  "CardOrcaRestockWatcher/1.0 (personal monitor; polite 10min interval)";
+  "Restock30pkmnChecker/1.0 (personal monitor; polite 10min interval)";
 const BROWSER_UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36";
 const FETCH_GAP_MS = 1500;
