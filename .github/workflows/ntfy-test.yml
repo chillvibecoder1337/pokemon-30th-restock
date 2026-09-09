@@ -21,10 +21,6 @@ jobs:
             -H "Priority: high" \
             -H "Tags: bell,shopping" \
             -H "Click: https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html" \
-            -d "TRUECOLLECTOR — TEST restock (fictief)
-1 in stock
-https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html
-
-Dit is een testding van CardOrca. Geen echte voorraad." \
+            --data-binary $'TRUECOLLECTOR — TEST restock (fictief)\n1 in stock\nhttps://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html\n\nDit is een testding van CardOrca. Geen echte voorraad.' \
             "https://ntfy.sh/${NTFY_TOPIC}"
           echo "Test notification sent"
