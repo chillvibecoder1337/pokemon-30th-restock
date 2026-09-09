@@ -673,7 +673,44 @@ function isFifaWorldCupName(name) {
   return /world\s*cup|wereldbeker|\bwk\s*2026\b|fifa\s*world/i.test(text);
 }
 
-function parsePaniniBelgiumHtml(html, target) {
+function paniniProductIds(html) {
+  const ids = new Set();
+  for (const match of html.matchAll(/id="product-item-info_(\d+)"/g)) {
+    ids.add(match[1]);
+  }
+  return ids;
+}
+
+function paniniAnchorCartIds(html) {
+  const ids = new Set();
+  const re =
+    /id="product-item-info_(\d+)"([\s\S]*?)(?=id="product-item-info_|<\/ol>)/g;
+  let match;
+  while ((match = re.exec(html))) {
+    if (/<a\b[^>]*class="[^"]*action tocart primary/i.test(match[2])) {
+      ids.add(match[1]);
+    }
+  }
+  return ids;
+}
+
+function paniniProductPageInStock(html) {
+  if (/schema\.org\/OutOfStock/i.test(html)) return false;
+  if (/"is_available"\s*:\s*false\b/.test(html)) return false;
+  if (/"is_salable"\s*:\s*"0"/.test(html)) return false;
+  if (/schema\.org\/InStock/i.test(html)) return true;
+  if (/"is_available"\s*:\s*true\b/.test(html)) return true;
+  if (/"is_salable"\s*:\s*"1"/.test(html)) return true;
+  if (/"product_availability"\s*:\s*"available"/i.test(html)) return true;
+  return false;
+}
+
+function paniniSaleableUrl(base, page) {
+  const join = base.includes("?") ? "&" : "?";
+  return `${base}${join}pnn_is_saleable=1&p=${page}`;
+}
+
+function parsePaniniBelgiumHtml(html, target, saleableIds) {
   const rows = [];
   const seen = new Set();
   const re =
@@ -693,8 +730,7 @@ function parsePaniniBelgiumHtml(html, target) {
     );
     if (!isFifaWorldCupName(name)) continue;
     seen.add(id);
-    const cart = chunk.match(/class="action tocart primary"([\s\S]{0,200}?)>/);
-    const inStock = Boolean(cart && !/\bdisabled\b/i.test(cart[0]));
+    const inStock = Boolean(saleableIds && saleableIds.has(id));
     rows.push(
       item({
         id: `panini-be-${id}`,
@@ -702,7 +738,7 @@ function parsePaniniBelgiumHtml(html, target) {
         name,
         url: named[1],
         inStock,
-        note: inStock ? "Panini.be: in winkelwagen" : "Niet op voorraad",
+        note: inStock ? "Panini.be: te koop" : "Niet op voorraad",
         section: target.section || "fifa-wc",
       }),
     );
@@ -735,16 +771,31 @@ async function fetchPanini(url) {
   return { text, finalUrl: url };
 }
 
+async function collectPaniniSaleableIds(base) {
+  const ids = new Set();
+  for (let page = 1; page <= 6; page += 1) {
+    const { text } = await fetchPanini(paniniSaleableUrl(base, page));
+    const before = ids.size;
+    for (const id of paniniProductIds(text)) ids.add(id);
+    for (const id of paniniAnchorCartIds(text)) ids.add(id);
+    if (ids.size === before) break;
+    await sleep(400);
+  }
+  return ids;
+}
+
 async function checkPaniniBelgium(target) {
   const base =
     target.url ||
     "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html";
+  const saleableIds = await collectPaniniSaleableIds(base);
   const seen = new Set();
   const rows = [];
   for (let page = 1; page <= 6; page += 1) {
     const url = `${base}${base.includes("?") ? "&" : "?"}p=${page}`;
     const { text } = await fetchPanini(url);
-    const listed = parsePaniniBelgiumHtml(text, target);
+    for (const id of paniniAnchorCartIds(text)) saleableIds.add(id);
+    const listed = parsePaniniBelgiumHtml(text, target, saleableIds);
     let added = 0;
     for (const row of listed) {
       if (seen.has(row.id)) continue;
@@ -760,6 +811,17 @@ async function checkPaniniBelgium(target) {
       target,
       "No FIFA World Cup 2026 listings on Panini Belgium yet",
     );
+  }
+  for (const row of rows) {
+    const magentoId = String(row.id).replace(/^panini-be-/, "");
+    await sleep(350);
+    try {
+      const { text } = await fetchPanini(row.url);
+      row.inStock = paniniProductPageInStock(text);
+    } catch {
+      row.inStock = saleableIds.has(magentoId);
+    }
+    row.note = row.inStock ? "Panini.be: te koop" : "Niet op voorraad";
   }
   return rows;
 }
