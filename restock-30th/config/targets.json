@@ -66,6 +66,19 @@
       "enabled": true
     },
     {
+      "id": "dreamland-be-30th",
+      "shop": "dreamland-be",
+      "label": "Dreamland België — Pokémon 30th (search)",
+      "url": "https://www.dreamland.be/nl/zoeken/producten?q=pokemon+30th",
+      "searchQueries": [
+        "pokemon 30th",
+        "pokemon 30th celebration",
+        "pokemon 30th anniversary",
+        "pokemon 30 jaar"
+      ],
+      "enabled": true
+    },
+    {
       "id": "panini-be-wc",
       "shop": "panini-be",
       "section": "fifa-wc",

@@ -46,7 +46,7 @@ async function fetchText(url) {
   let res = first;
   if (
     !first.ok &&
-    /(bol\.com|amazon\.nl|amazon\.com\.be|paninibelgium)/i.test(url)
+    /(bol\.com|amazon\.nl|amazon\.com\.be|paninibelgium|dreamland\.be)/i.test(url)
   ) {
     res = await fetch(url, {
       headers: requestHeaders(BROWSER_UA),
@@ -826,6 +826,195 @@ async function checkPaniniBelgium(target) {
   return rows;
 }
 
+function isDreamlandBlocked(html) {
+  return /Beveiligingscontrole|Even controleren of je een mens bent|Just a moment|cf-mitigated|cf-challenge/i.test(
+    html,
+  ) && !/product-card/i.test(html);
+}
+
+function dreamlandCardInStock(chunk) {
+  if (/product-card__stock-status\s+-negative/i.test(chunk)) return false;
+  if (/Tijdelijk uitverkocht|Niet op voorraad|\bUitverkocht\b/i.test(chunk)) {
+    return false;
+  }
+  return /Levertijd|Op voorraad|Pre-?order|In winkelwagen/i.test(chunk);
+}
+
+function parseDreamlandHtml(html) {
+  const rows = [];
+  const seen = new Set();
+  const cards = html.matchAll(/<article class="product-card[\s\S]*?<\/article>/gi);
+  for (const match of cards) {
+    const chunk = match[0];
+    const named = chunk.match(
+      /<h2 class="product-card__name"[^>]*>[\s\S]*?<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i,
+    );
+    if (!named) continue;
+    const name = decodeEntities(named[2].replace(/<[^>]+>/g, " ")).replace(
+      /\s+/g,
+      " ",
+    );
+    if (!isPokemon30Name(name)) continue;
+    const code =
+      (chunk.match(/data-product-code="(\d+)"/i) || [])[1] ||
+      (named[1].match(/\/(\d{6,})\s*$/) || [])[1];
+    if (!code || seen.has(code)) continue;
+    seen.add(code);
+    const inStock = dreamlandCardInStock(chunk);
+    rows.push(
+      item({
+        id: `dreamland-be-${code}`,
+        shop: "dreamland-be",
+        name,
+        url: named[1],
+        inStock,
+        note: inStock ? "Dreamland.be: te koop" : "Niet op voorraad",
+      }),
+    );
+  }
+  return rows;
+}
+
+function parseDdgDreamland(html) {
+  const rows = [];
+  const seen = new Set();
+  const titles = new Map();
+  for (const block of html.matchAll(
+    /<h2 class="result__title">[\s\S]*?<\/h2>[\s\S]*?dreamland\.be\/nl\/producten\/([a-z0-9-]+)\/(\d+)/gi,
+  )) {
+    const heading = block[0].match(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i);
+    const name = heading
+      ? decodeEntities(heading[1].replace(/<[^>]+>/g, ""))
+      : block[1].replace(/-/g, " ");
+    titles.set(block[2], name);
+  }
+  const add = (slug, id) => {
+    if (!slug || !id || seen.has(id)) return;
+    const slugName = slug.replace(/-/g, " ");
+    const title = titles.get(id) || "";
+    const name = isPokemon30Name(title) ? title : slugName;
+    if (!isPokemon30Name(name)) return;
+    seen.add(id);
+    rows.push(
+      item({
+        id: `dreamland-be-${id}`,
+        shop: "dreamland-be",
+        name,
+        url: `https://www.dreamland.be/nl/producten/${slug}/${id}`,
+        inStock: false,
+        note: "Found via search — Dreamland blocks bot stock checks; open the page",
+      }),
+    );
+  };
+  let match;
+  const plainRe = /dreamland\.be\/nl\/producten\/([a-z0-9-]+)\/(\d+)/gi;
+  while ((match = plainRe.exec(html))) add(match[1], match[2]);
+  const uddgRe = /uddg=([^&"']+)/gi;
+  while ((match = uddgRe.exec(html))) {
+    let decoded = match[1];
+    try {
+      decoded = decodeURIComponent(decoded);
+    } catch {
+      /* keep raw */
+    }
+    const product = decoded.match(
+      /dreamland\.be\/nl\/producten\/([a-z0-9-]+)\/(\d+)/i,
+    );
+    if (product) add(product[1], product[2]);
+  }
+  return rows;
+}
+
+async function fetchDreamland(url) {
+  const curlBin = process.platform === "win32" ? "curl.exe" : "curl";
+  const { stdout, stderr } = await execFileAsync(
+    curlBin,
+    [
+      "-sS",
+      "-L",
+      "--compressed",
+      "-A",
+      BROWSER_UA,
+      "-H",
+      "Accept-Language: nl-BE,nl;q=0.9,en;q=0.7",
+      "--max-time",
+      "30",
+      url,
+    ],
+    { maxBuffer: 8_000_000, windowsHide: true },
+  );
+  const text = String(stdout || "");
+  if (!text) {
+    throw new Error(String(stderr || `empty response for ${url}`));
+  }
+  if (isDreamlandBlocked(text)) {
+    throw new Error("Dreamland Cloudflare challenge");
+  }
+  return { text, finalUrl: url };
+}
+
+async function checkDreamlandViaDdg(target) {
+  const queries = target.searchQueries || [
+    "pokemon 30th",
+    "pokemon 30th celebration",
+    "pokemon 30th anniversary",
+    "pokemon 30 jaar",
+  ];
+  const seen = new Set();
+  const rows = [];
+  for (const query of queries) {
+    const ddg = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(`site:dreamland.be/nl ${query}`)}`;
+    try {
+      const { text } = await fetchText(ddg);
+      for (const row of parseDdgDreamland(text)) {
+        if (seen.has(row.id)) continue;
+        seen.add(row.id);
+        rows.push(row);
+      }
+    } catch {
+      /* DDG is a fallback index */
+    }
+    await sleep(400);
+  }
+  return rows;
+}
+
+async function checkDreamland(target) {
+  const queries = target.searchQueries || ["pokemon 30th"];
+  const seen = new Set();
+  const rows = [];
+  let blocked = false;
+  for (const query of queries) {
+    const searchUrl = `https://www.dreamland.be/nl/zoeken/producten?q=${encodeURIComponent(query)}`;
+    try {
+      const { text } = await fetchDreamland(searchUrl);
+      for (const row of parseDreamlandHtml(text)) {
+        if (seen.has(row.id)) continue;
+        seen.add(row.id);
+        rows.push(row);
+      }
+    } catch (err) {
+      blocked = /Cloudflare|HTTP 403|challenge/i.test(err.message);
+      if (!blocked) {
+        const viaDdg = await checkDreamlandViaDdg(target);
+        if (viaDdg.length) return viaDdg;
+        return emptyScan(target, `Dreamland check failed (${err.message})`);
+      }
+      break;
+    }
+    await sleep(400);
+  }
+  if (rows.length) return rows;
+  const viaDdg = await checkDreamlandViaDdg(target);
+  if (viaDdg.length) return viaDdg;
+  return emptyScan(
+    target,
+    blocked
+      ? "Dreamland blocked bots. No 30th product URLs in the search index this round"
+      : "No Pokémon 30th listings on Dreamland Belgium yet (search scraped)",
+  );
+}
+
 async function checkAw2(target) {
   const { text } = await fetchText(
     target.apiUrl || "https://aw2spzoo.com/api/products",
@@ -894,6 +1083,10 @@ async function checkTarget(target) {
 
   if (target.shop === "panini-be") {
     return checkPaniniBelgium(target);
+  }
+
+  if (target.shop === "dreamland-be") {
+    return checkDreamland(target);
   }
 
   throw new Error(`Unknown shop: ${target.shop}`);
