@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-09T18:38:51.708Z",
+  "checkedAt": "2026-09-09T18:45:00.483Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -11,7 +11,8 @@
       "inStock": false,
       "stock": 0,
       "note": "No Pokémon 30th listings in AW2 catalog yet",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "cardland-30th",
@@ -21,7 +22,8 @@
       "inStock": false,
       "stock": 0,
       "note": "No Pokémon 30th listings on Cardland yet (search + Pokémon category scraped)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6655",
@@ -31,7 +33,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6657",
@@ -41,7 +44,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6658",
@@ -51,7 +55,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6656",
@@ -61,7 +66,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6659",
@@ -71,7 +77,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6652",
@@ -81,7 +88,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6654",
@@ -91,7 +99,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6653",
@@ -101,7 +110,8 @@
       "inStock": true,
       "stock": null,
       "note": "Dostępny (presale buyable)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "truecollector-6651",
@@ -111,7 +121,8 @@
       "inStock": false,
       "stock": null,
       "note": "Aktualnie niedostępny",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "bol-9300000273455325",
@@ -121,7 +132,19 @@
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "amazon-nl-30th",
@@ -131,7 +154,8 @@
       "inStock": false,
       "stock": 0,
       "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
     },
     {
       "id": "amazon-be-30th",
@@ -141,7 +165,74 @@
       "inStock": false,
       "stock": 0,
       "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
-      "error": null
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "panini-be-340835",
+      "shop": "panini-be",
+      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-340838",
+      "shop": "panini-be",
+      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-312326",
+      "shop": "panini-be",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-312722",
+      "shop": "panini-be",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Box van 50 zakjes Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-box-van-50-zakjes-panini-bundle005460box50-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-311536",
+      "shop": "panini-be",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-309096",
+      "shop": "panini-be",
+      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Niet op voorraad",
+      "error": null,
+      "section": "fifa-wc"
     }
   ],
   "alerts": [],
