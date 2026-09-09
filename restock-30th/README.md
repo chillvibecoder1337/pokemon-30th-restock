@@ -1,6 +1,6 @@
 # Pokémon 30th restock watcher
 
-Personal, $0 monitor for Cardland, AW2, TrueCollector, and Bol.com. GitHub Actions checks public stock every 10 minutes. The dashboard shows status and one-tap Open links. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
+Personal, $0 monitor for Cardland, AW2, TrueCollector, and Bol.com. GitHub Actions checks public stock every **10 minutes** on a **public** repo. GitHub Pages hosts the dashboard. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
 
 This is a monitor plus open-the-page helper, not a checkout bot.
 
@@ -27,11 +27,11 @@ You can set one or both. Missing secrets are skipped.
 
 ## GitHub
 
-1. Push this repo (public Pages is free; keep the repo public or accept slower checks on a private repo).
-2. Add the three secrets above.
+1. This repo is **public** so GitHub Pages works for free.
+2. Add the secrets above (`NTFY_TOPIC` and/or Telegram).
 3. Actions → **Restock check** → Enable if prompted → **Run workflow**.
 4. Settings → Pages → Source: **GitHub Actions**.
-5. After the first successful run, open the Pages URL. The dashboard loads `data/status.json`. **Check now** opens the workflow so you can run it by hand.
+5. After the first successful run, open the Pages URL: `https://chillvibecoder1337.github.io/pokemon-30th-restock/`. The dashboard loads `data/status.json`. **Check now** opens the workflow so you can run it by hand.
 
 Cron is every 10 minutes (`*/10 * * * *`). GitHub can delay scheduled jobs.
 

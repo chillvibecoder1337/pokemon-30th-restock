@@ -1,5 +1,7 @@
 # Pokemon 30th restock watcher
 
-Personal dashboard and 10-minute stock checks for Cardland, AW2, TrueCollector, and Bol.com.
+Public GitHub repo with a GitHub Pages dashboard and stock checks every **10 minutes** for Cardland, AW2, TrueCollector, and Bol.com.
 
-Open the GitHub Pages site after the first Actions run. Phone alerts: ntfy + Telegram. Setup: [restock-30th/README.md](restock-30th/README.md)
+After the first Actions run, open: https://chillvibecoder1337.github.io/pokemon-30th-restock/
+
+Phone alerts: ntfy + Telegram. Setup: [restock-30th/README.md](restock-30th/README.md)
