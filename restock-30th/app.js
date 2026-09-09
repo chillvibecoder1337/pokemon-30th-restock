@@ -68,6 +68,55 @@ function badge(item) {
   return `<span class="badge out">Out of stock</span>`;
 }
 
+const SHOP_LABELS = {
+  aw2: "AW2",
+  cardland: "Cardland",
+  truecollector: "TrueCollector",
+  bol: "Bol.com",
+  "amazon-nl": "Amazon Nederland",
+  "amazon-be": "Amazon België",
+};
+
+function shopLabel(shop) {
+  return SHOP_LABELS[shop] || String(shop || "Shop");
+}
+
+function groupByShop(listItems) {
+  const groups = [];
+  const indexByShop = new Map();
+  for (const item of listItems) {
+    const shop = item.shop || "other";
+    if (!indexByShop.has(shop)) {
+      indexByShop.set(shop, groups.length);
+      groups.push({ shop, items: [] });
+    }
+    groups[indexByShop.get(shop)].items.push(item);
+  }
+  return groups;
+}
+
+function itemCard(item) {
+  const open = item.url
+    ? `<a class="btn secondary" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">Open</a>`
+    : "";
+  const note = item.note
+    ? `<div class="note">${escapeHtml(item.note)}</div>`
+    : "";
+  const error = item.error
+    ? `<div class="error">${escapeHtml(item.error)}</div>`
+    : "";
+  return `<article class="card">
+        <div class="row">
+          <div>
+            <div class="name">${escapeHtml(item.name)}</div>
+            ${note}${error}
+          </div>
+          ${badge(item)}
+        </div>
+        <div class="actions">${open}</div>
+      </article>`;
+}
+
 function render(status) {
   items = status.items || [];
   const when = status.checkedAt
@@ -79,28 +128,16 @@ function render(status) {
     list.innerHTML = '<p class="note">No items yet. Press Check now.</p>';
     return;
   }
-  list.innerHTML = items
-    .map((item) => {
-      const open = item.url
-        ? `<a class="btn secondary" href="${escapeHtml(item.url)}" target="_blank" rel="noopener">Open</a>`
-        : "";
-      const note = item.note
-        ? `<div class="note">${escapeHtml(item.note)}</div>`
-        : "";
-      const error = item.error
-        ? `<div class="error">${escapeHtml(item.error)}</div>`
-        : "";
-      return `<article class="card">
-        <div class="row">
-          <div>
-            <div class="shop">${escapeHtml(item.shop)}</div>
-            <div class="name">${escapeHtml(item.name)}</div>
-            ${note}${error}
-          </div>
-          ${badge(item)}
+  list.innerHTML = groupByShop(items)
+    .map((group) => {
+      const inShop = group.items.filter((item) => item.inStock).length;
+      return `<section class="shop-section">
+        <div class="shop-heading">
+          <h2>${escapeHtml(shopLabel(group.shop))}</h2>
+          <span class="count">${inShop}/${group.items.length} in stock</span>
         </div>
-        <div class="actions" style="margin:0.75rem 0 0">${open}</div>
-      </article>`;
+        ${group.items.map(itemCard).join("")}
+      </section>`;
     })
     .join("");
 }
