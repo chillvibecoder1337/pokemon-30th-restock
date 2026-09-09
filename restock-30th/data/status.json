@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-09T14:51:31.587Z",
+  "checkedAt": "2026-09-09T18:38:51.708Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -116,18 +116,8 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null
-    },
-    {
-      "id": "bol-9300000272258854",
-      "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -144,194 +134,18 @@
       "error": null
     },
     {
-      "id": "amazon-be-B0H2C6NJVJ",
+      "id": "amazon-be-30th",
       "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0HH8M5KHP",
-      "shop": "amazon-be",
-      "name": "BBTT Toploader & Pokémon 30e viering eerste partner speciale illustratie kaartset vol. 3 - Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HH8M5KHP",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0HGGDWC9W",
-      "shop": "amazon-be",
-      "name": "Funism Pokemon Palmsize Wonders 30th Anniversary First Partner Series Blind Box Chinese & BBTT Verzendbescherming",
-      "url": "https://www.amazon.com.be/dp/B0HGGDWC9W",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "shop": "amazon-be",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0HDBHRSGX",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0H82Z5XX1",
-      "shop": "amazon-be",
-      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
-      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null
-    },
-    {
-      "id": "amazon-be-B0HFSS86MC",
-      "shop": "amazon-be",
-      "name": "Pokemon 30e verjaardag eerste partnerkaartenset vol. 3 Chinees | 1 promokaart van 9 beginners, magnetische kaarthouder en Slim CSV10C booster met 5 kaarten, vereenvoudigd Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HFSS86MC",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
+      "inStock": false,
+      "stock": 0,
+      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null
     }
   ],
-  "alerts": [
-    {
-      "id": "truecollector-6655",
-      "name": "Pokémon TCG: 30th Celebration - 2-Pack PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-2-pack-przedsprzedaz-p-6655.html"
-    },
-    {
-      "id": "truecollector-6657",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-przedsprzedaz-p-6657.html"
-    },
-    {
-      "id": "truecollector-6658",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-przedsprzedaz-p-6658.html"
-    },
-    {
-      "id": "truecollector-6656",
-      "name": "Pokémon TCG: 30th Celebration - Binder Collection PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-binder-collection-przedsprzedaz-p-6656.html"
-    },
-    {
-      "id": "truecollector-6659",
-      "name": "Pokémon TCG: 30th Celebration - Mini Tin - MIX Display (10) PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-mini-tin-mix-display-10-przedsprzedaz-p-6659.html"
-    },
-    {
-      "id": "truecollector-6652",
-      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6652.html"
-    },
-    {
-      "id": "truecollector-6654",
-      "name": "Pokémon TCG: 30th Celebration - Poster Collection PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-poster-collection-przedsprzedaz-p-6654.html"
-    },
-    {
-      "id": "truecollector-6653",
-      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6653.html"
-    }
-  ],
-  "notify": [
-    {
-      "id": "truecollector-6655",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 60 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6657",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 74 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6658",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 74 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6656",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 71 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6659",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 81 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6652",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 71 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6654",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 71 has a value of 379 which is greater than 255."
-      ]
-    },
-    {
-      "id": "truecollector-6653",
-      "ntfy": false,
-      "telegram": false,
-      "errors": [
-        "ntfy: Cannot convert argument to a ByteString because the character at index 71 has a value of 379 which is greater than 255."
-      ]
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
