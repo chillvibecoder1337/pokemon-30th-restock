@@ -58,6 +58,14 @@ Bol.com often returns HTTP 403 to datacenter IPs (including GitHub Actions). The
 ## Run locally
 
 ```bash
+node restock-30th/scripts/server.mjs
+```
+
+Open http://127.0.0.1:4173/ — **Check now** re-runs the shop checks on the page (no GitHub redirect).
+
+One-off check without the dashboard:
+
+```bash
 node restock-30th/scripts/check.mjs
 ```
 
