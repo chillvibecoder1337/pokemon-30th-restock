@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-10T09:55:22.090Z",
+  "checkedAt": "2026-09-10T10:11:52.921Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,19 +127,8 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000272258854",
-      "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -169,13 +158,46 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "shop": "amazon-nl",
+      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
+      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "shop": "amazon-nl",
+      "name": "Pokemon 30-jarig jubileum eerste partnerkaartenset Vol. 2 (Chinees)",
+      "url": "https://www.amazon.nl/dp/B0H82Z5XX1",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HFSS86MC",
+      "shop": "amazon-nl",
+      "name": "Pokemon 30th Anniversary First Partner Card Set Vol. 3 Chinees | 1 van 9 starter-promotiekaarten, magnetische kaarthouder en CSV10C Slim-Booster met 5 kaarten, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HFSS86MC",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "amazon-be-30th",
       "shop": "amazon-be",
       "name": "Amazon België — Pokémon 30th (search)",
       "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
+      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -270,14 +292,36 @@
   ],
   "alerts": [
     {
-      "id": "panini-be-333893",
-      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Final Set Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-final-set-panini-005461boxftsexpst-be01.html"
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
+      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ"
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "name": "Pokemon 30-jarig jubileum eerste partnerkaartenset Vol. 2 (Chinees)",
+      "url": "https://www.amazon.nl/dp/B0H82Z5XX1"
+    },
+    {
+      "id": "amazon-nl-B0HFSS86MC",
+      "name": "Pokemon 30th Anniversary First Partner Card Set Vol. 3 Chinees | 1 van 9 starter-promotiekaarten, magnetische kaarthouder en CSV10C Slim-Booster met 5 kaarten, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HFSS86MC"
     }
   ],
   "notify": [
     {
-      "id": "panini-be-333893",
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0HFSS86MC",
       "ntfy": true,
       "telegram": false,
       "errors": []
