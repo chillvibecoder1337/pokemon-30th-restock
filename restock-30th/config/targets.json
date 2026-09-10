@@ -66,6 +66,18 @@
       "enabled": true
     },
     {
+      "id": "catchyourcards-30th",
+      "shop": "catchyourcards",
+      "label": "CatchYourCards — Pokémon 30th Celebration",
+      "url": "https://catchyourcards.nl/categorie/30th-celebration/",
+      "searchQueries": [
+        "30th celebration",
+        "pokemon 30th",
+        "pokemon 30 jaar"
+      ],
+      "enabled": true
+    },
+    {
       "id": "dreamland-be-30th",
       "shop": "dreamland-be",
       "label": "Dreamland België — Pokémon 30th (search)",

@@ -78,6 +78,7 @@ const SHOP_LABELS = {
   "amazon-be": "Amazon België",
   "panini-be": "Panini België",
   "dreamland-be": "Dreamland België",
+  catchyourcards: "CatchYourCards",
 };
 
 const SECTION_LABELS = {
@@ -651,6 +652,118 @@ function parseDdgDreamland(html) {
   return rows;
 }
 
+function stripTrackingQuery(url) {
+  try {
+    const parsed = new URL(url);
+    parsed.searchParams.delete("v");
+    parsed.hash = "";
+    return parsed.toString();
+  } catch {
+    return String(url || "").split("?")[0];
+  }
+}
+
+function isCatchYourCardsBlocked(html) {
+  return (
+    /Just a moment|cf-mitigated|Beveiligingscontrole|Even controleren of je een mens/i.test(
+      html,
+    ) && !(/\btype-product\b|woocommerce-LoopProduct/i.test(html))
+  );
+}
+
+function parseCatchYourCardsHtml(html) {
+  const rows = [];
+  const seen = new Set();
+  const cards = html.matchAll(
+    /<li[^>]*class="([^"]*\btype-product\b[^"]*)"[^>]*>([\s\S]*?)<\/li>/gi,
+  );
+  for (const match of cards) {
+    const cls = match[1];
+    const chunk = match[2];
+    const id = (cls.match(/\bpost-(\d+)\b/) || [])[1];
+    if (!id || seen.has(id)) continue;
+    const titled =
+      chunk.match(
+        /<h2 class="woocommerce-loop-product__title"[^>]*>([\s\S]*?)<\/h2>/i,
+      ) ||
+      chunk.match(/woocommerce-LoopProduct-link[^>]*title="([^"]+)"/i) ||
+      chunk.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
+    if (!titled) continue;
+    const name = decodeEntities(titled[1].replace(/<[^>]+>/g, " ")).replace(
+      /\s+/g,
+      " ",
+    );
+    if (!isPokemon30Name(name)) continue;
+    const href = (
+      chunk.match(
+        /href="(https?:\/\/catchyourcards\.nl\/product\/[^"?#]+)/i,
+      ) || []
+    )[1];
+    if (!href) continue;
+    seen.add(id);
+    const inStock = /\binstock\b/i.test(cls) && !/\boutofstock\b/i.test(cls);
+    rows.push(
+      row({
+        id: `catchyourcards-${id}`,
+        shop: "catchyourcards",
+        name,
+        url: stripTrackingQuery(href),
+        inStock,
+        note: inStock ? "CatchYourCards: te koop" : "Niet op voorraad",
+      }),
+    );
+  }
+  return rows;
+}
+
+function parseDdgCatchYourCards(html) {
+  const rows = [];
+  const seen = new Set();
+  const titles = new Map();
+  for (const block of html.matchAll(
+    /<h2 class="result__title">[\s\S]*?<\/h2>[\s\S]*?catchyourcards\.nl\/product\/([a-z0-9-]+)/gi,
+  )) {
+    const heading = block[0].match(/class="result__a"[^>]*>([\s\S]*?)<\/a>/i);
+    const name = heading
+      ? decodeEntities(heading[1].replace(/<[^>]+>/g, ""))
+      : block[1].replace(/-/g, " ");
+    titles.set(block[1], name);
+  }
+  const add = (slug) => {
+    if (!slug || seen.has(slug)) return;
+    const slugName = slug.replace(/-/g, " ");
+    const title = titles.get(slug) || "";
+    const name = isPokemon30Name(title) ? title : slugName;
+    if (!isPokemon30Name(name)) return;
+    seen.add(slug);
+    rows.push(
+      row({
+        id: `catchyourcards-${slug}`,
+        shop: "catchyourcards",
+        name,
+        url: `https://catchyourcards.nl/product/${slug}/`,
+        inStock: false,
+        note: "Found via search — CatchYourCards blocks bot stock checks; open the page",
+      }),
+    );
+  };
+  let match;
+  const plainRe = /catchyourcards.nl\/product\/([a-z0-9-]+)/gi;
+  while ((match = plainRe.exec(html))) add(match[1]);
+  const uddgRe = /uddg=([^&"']+)/gi;
+  while ((match = uddgRe.exec(html))) {
+    let decoded = match[1];
+    try {
+      decoded = decodeURIComponent(decoded);
+    } catch {
+      /* keep raw */
+    }
+    const product = decoded.match(/catchyourcards\.nl\/product\/([a-z0-9-]+)/i);
+    if (product) add(product[1]);
+  }
+  return rows;
+}
+
 async function checkTarget(target) {
   if (!target.enabled) {
     return [
@@ -876,6 +989,66 @@ async function checkTarget(target) {
           note: blocked
             ? "Dreamland blocked bots. No 30th product URLs in the search index this round"
             : "No Pokémon 30th listings on Dreamland Belgium yet (search scraped)",
+        }),
+      ];
+    }
+    return rows;
+  }
+  if (target.shop === "catchyourcards") {
+    const base =
+      target.url || "https://catchyourcards.nl/categorie/30th-celebration/";
+    const seen = new Set();
+    const rows = [];
+    let blocked = false;
+    for (let page = 1; page <= 6; page += 1) {
+      const url =
+        page === 1 ? base : `${base.replace(/\/?$/, "/")}page/${page}/`;
+      try {
+        const html = await fetchText(url);
+        if (isCatchYourCardsBlocked(html)) {
+          blocked = true;
+          break;
+        }
+        const listed = parseCatchYourCardsHtml(html);
+        let added = 0;
+        for (const item of listed) {
+          if (seen.has(item.id)) continue;
+          seen.add(item.id);
+          rows.push(item);
+          added += 1;
+        }
+        if (added === 0) break;
+      } catch (err) {
+        blocked = /Cloudflare|HTTP 403|challenge|522/i.test(err.message);
+        if (!blocked) throw err;
+        break;
+      }
+    }
+    if (!rows.length) {
+      const queries = target.searchQueries || ["30th celebration", "pokemon 30th"];
+      for (const query of queries) {
+        const ddg = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(`site:catchyourcards.nl/product ${query}`)}`;
+        try {
+          for (const item of parseDdgCatchYourCards(await fetchText(ddg))) {
+            if (seen.has(item.id)) continue;
+            seen.add(item.id);
+            rows.push(item);
+          }
+        } catch {
+          /* DDG is a fallback index */
+        }
+      }
+    }
+    if (!rows.length) {
+      return [
+        row({
+          id: target.id,
+          shop: "catchyourcards",
+          name: target.label,
+          url: target.url || "",
+          note: blocked
+            ? "CatchYourCards blocked bots. No 30th product URLs in the search index this round"
+            : "No Pokémon 30th listings on CatchYourCards yet",
         }),
       ];
     }

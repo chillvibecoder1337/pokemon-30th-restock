@@ -1,6 +1,6 @@
 # restock30pkmn checker
 
-Personal, $0 monitor for Pokémon 30th and FIFA World Cup 2026. Shops: Cardland, AW2, TrueCollector, Bol.com, Amazon Nederland, Amazon België, Dreamland België, and Panini België. GitHub Actions checks public stock every **10 minutes** on a **public** repo. GitHub Pages hosts the dashboard. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
+Personal, $0 monitor for Pokémon 30th and FIFA World Cup 2026. Shops: Cardland, AW2, TrueCollector, Bol.com, Amazon Nederland, Amazon België, CatchYourCards, Dreamland België, and Panini België. GitHub Actions checks public stock every **10 minutes** on a **public** repo. GitHub Pages hosts the dashboard. ntfy.sh and Telegram ping only when an item flips from out of stock to in stock.
 
 This is a monitor plus open-the-page helper, not a checkout bot.
 
@@ -46,6 +46,7 @@ Every enabled Pokémon shop is scraped for **Pokémon 30th** names (`30th`, `30 
 - **TrueCollector** — 30th category page. Buyable listings (`Do koszyka`) count as in stock, including presale. `ProduktBezZakupu` is out of stock. Their shop sometimes shows a wait page; the checker retries once with a browser User-Agent.
 - **Bol.com** — search page when the IP is allowed; otherwise DuckDuckGo `site:bol.com` as a listing fallback. Bol often returns HTTP 403 to datacenter IPs (including GitHub Actions), so stock on Bol can be “open the page” until Bol unblocks.
 - **Amazon NL** (`amazon.nl`) and **Amazon BE** (`amazon.com.be`) — search results named Pokémon 30th / 30e verjaardag. Amazon often serves a robot check from GitHub; then DuckDuckGo `site:amazon.nl` / `site:amazon.com.be` is the listing fallback. Stock is only marked in stock when the search card says so; otherwise open the product page.
+- **CatchYourCards** — WooCommerce category [30th Celebration](https://catchyourcards.nl/categorie/30th-celebration/). `instock` / `outofstock` on the product cards. Cloudflare often blocks GitHub; then DuckDuckGo `site:catchyourcards.nl` is the listing fallback.
 - **Dreamland België** — [product search](https://www.dreamland.be/nl/zoeken/producten?q=pokemon+30th) for Pokémon 30th / 30 jaar names. Stock comes from the listing (`Levertijd` vs `Tijdelijk uitverkocht`). Cloudflare often blocks GitHub; then DuckDuckGo `site:dreamland.be` is the listing fallback.
 - **Panini België** — official shop category [FIFA World Cup](https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html). Lists 2026 sticker/Adrenalyn products. Stock is read from the product page (`schema.org/InStock`), not the disabled listing button. Missing-sticker order pages are skipped.
 
