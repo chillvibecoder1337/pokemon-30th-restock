@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-10T05:52:51.123Z",
+  "checkedAt": "2026-09-10T09:55:22.090Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -125,13 +125,24 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-30th",
+      "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Bol.com — Pokémon 30th (search)",
-      "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
       "inStock": false,
-      "stock": 0,
-      "note": "Bol blocked bots (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th). No 30th product URLs in the search index this round",
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -169,6 +180,17 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "catchyourcards-30th",
+      "shop": "catchyourcards",
+      "name": "CatchYourCards — Pokémon 30th Celebration",
+      "url": "https://catchyourcards.nl/categorie/30th-celebration/",
+      "inStock": false,
+      "stock": 0,
+      "note": "No Pokémon 30th listings on CatchYourCards yet",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "dreamland-be-30th",
       "shop": "dreamland-be",
       "name": "Dreamland België — Pokémon 30th (search)",
@@ -202,10 +224,10 @@
       "section": "fifa-wc"
     },
     {
-      "id": "panini-be-312326",
+      "id": "panini-be-333893",
       "shop": "panini-be",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html",
+      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Final Set Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-final-set-panini-005461boxftsexpst-be01.html",
       "inStock": true,
       "stock": null,
       "note": "Panini.be: te koop",
@@ -213,10 +235,10 @@
       "section": "fifa-wc"
     },
     {
-      "id": "panini-be-312722",
+      "id": "panini-be-312326",
       "shop": "panini-be",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Box van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-box-van-50-zakjes-panini-bundle005460box50-be01.html",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html",
       "inStock": true,
       "stock": null,
       "note": "Panini.be: te koop",
@@ -246,8 +268,21 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "panini-be-333893",
+      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Final Set Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-final-set-panini-005461boxftsexpst-be01.html"
+    }
+  ],
+  "notify": [
+    {
+      "id": "panini-be-333893",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
