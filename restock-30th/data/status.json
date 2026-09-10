@@ -1,9 +1,7 @@
 {
-  "checkedAt": "2026-09-09T19:16:38.870Z",
-  "ok": false,
-  "errors": [
-    "truecollector-30th: fetch failed"
-  ],
+  "checkedAt": "2026-09-10T05:52:51.123Z",
+  "ok": true,
+  "errors": [],
   "items": [
     {
       "id": "aw2-30th",
@@ -28,46 +26,134 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "truecollector-30th",
+      "id": "truecollector-6655",
       "shop": "truecollector",
-      "name": "TrueCollector — Pokémon 30th Celebration",
-      "url": "https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html",
-      "inStock": false,
+      "name": "Pokémon TCG: 30th Celebration - 2-Pack PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-2-pack-przedsprzedaz-p-6655.html",
+      "inStock": true,
       "stock": null,
-      "note": "Check failed",
-      "error": "fetch failed",
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000273455325",
-      "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "note": "Dostępny (presale buyable)",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
-      "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
-      "inStock": false,
+      "id": "truecollector-6657",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-przedsprzedaz-p-6657.html",
+      "inStock": true,
       "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "note": "Dostępny (presale buyable)",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-30th",
-      "shop": "amazon-nl",
-      "name": "Amazon Nederland — Pokémon 30th (search)",
-      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
+      "id": "truecollector-6658",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-przedsprzedaz-p-6658.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6656",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Binder Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-binder-collection-przedsprzedaz-p-6656.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6659",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Mini Tin - MIX Display (10) PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-mini-tin-mix-display-10-przedsprzedaz-p-6659.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6652",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6652.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6654",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Poster Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-poster-collection-przedsprzedaz-p-6654.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6653",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6653.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Dostępny (presale buyable)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6651",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Booster Bundle PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-booster-bundle-przedsprzedaz-p-6651.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-30th",
+      "shop": "bol",
+      "name": "Bol.com — Pokémon 30th (search)",
+      "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "Bol blocked bots (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th). No 30th product URLs in the search index this round",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "shop": "amazon-nl",
+      "name": "Bundel van BBTT Toploader & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -79,6 +165,17 @@
       "inStock": false,
       "stock": 0,
       "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "dreamland-be-30th",
+      "shop": "dreamland-be",
+      "name": "Dreamland België — Pokémon 30th (search)",
+      "url": "https://www.dreamland.be/nl/zoeken/producten?q=pokemon+30th",
+      "inStock": false,
+      "stock": 0,
+      "note": "Dreamland blocked bots. No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -149,76 +246,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "panini-be-340835",
-      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html"
-    },
-    {
-      "id": "panini-be-340838",
-      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html"
-    },
-    {
-      "id": "panini-be-312326",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html"
-    },
-    {
-      "id": "panini-be-312722",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Box van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-box-van-50-zakjes-panini-bundle005460box50-be01.html"
-    },
-    {
-      "id": "panini-be-311536",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html"
-    },
-    {
-      "id": "panini-be-309096",
-      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html"
-    }
-  ],
-  "notify": [
-    {
-      "id": "panini-be-340835",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-340838",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-312326",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-312722",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-311536",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-309096",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
