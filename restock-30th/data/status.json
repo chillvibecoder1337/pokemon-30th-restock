@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-11T21:54:29.521Z",
+  "checkedAt": "2026-09-11T23:39:47.845Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -164,7 +164,7 @@
       "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
+      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
