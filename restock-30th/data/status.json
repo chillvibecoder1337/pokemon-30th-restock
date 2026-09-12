@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-12T18:42:28.908Z",
+  "checkedAt": "2026-09-12T20:59:33.921Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -138,7 +138,7 @@
     {
       "id": "bol-9300000272258854",
       "shop": "bol",
-      "name": "Shop 30th anniversary pokemon tcg - Amazon® Official Site",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
@@ -153,7 +153,7 @@
       "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -164,7 +164,7 @@
       "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
