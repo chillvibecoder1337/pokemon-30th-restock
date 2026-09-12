@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-12T06:26:46.135Z",
+  "checkedAt": "2026-09-12T11:00:46.536Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -147,13 +147,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "shop": "amazon-nl",
-      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
-      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
-      "inStock": true,
+      "id": "bol-9300000354327909",
+      "shop": "bol",
+      "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
+      "inStock": false,
       "stock": null,
-      "note": "Amazon search: op voorraad",
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -162,6 +162,17 @@
       "shop": "amazon-nl",
       "name": "Bundel van BBTT Toploader & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
       "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -279,43 +290,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
-      "url": "https://www.amazon.nl/dp/B0HDBHRSGX"
-    },
-    {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "name": "Bundel van BBTT Toploader & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
-    },
-    {
-      "id": "amazon-nl-B0GX1KCLRY",
-      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
-      "url": "https://www.amazon.nl/dp/B0GX1KCLRY"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-nl-B0GX1KCLRY",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
