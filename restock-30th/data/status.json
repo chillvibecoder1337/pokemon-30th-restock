@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-12T22:49:12.892Z",
+  "checkedAt": "2026-09-13T00:27:14.796Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -153,51 +153,18 @@
       "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H1WYD6P5",
+      "id": "amazon-be-30th",
       "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0HH8M5KHP",
-      "shop": "amazon-be",
-      "name": "BBTT Toploader & Pokémon 30e viering eerste partner speciale illustratie kaartset vol. 3 - Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HH8M5KHP",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "shop": "amazon-be",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
-      "stock": null,
-      "note": "Amazon listing — open for live stock",
+      "stock": 0,
+      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -279,43 +246,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
-    },
-    {
-      "id": "amazon-be-B0HH8M5KHP",
-      "name": "BBTT Toploader & Pokémon 30e viering eerste partner speciale illustratie kaartset vol. 3 - Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HH8M5KHP"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0HH8M5KHP",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
