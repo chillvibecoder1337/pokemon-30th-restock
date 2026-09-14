@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-14T06:27:35.362Z",
+  "checkedAt": "2026-09-14T13:08:30.319Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,7 +127,7 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
       "inStock": false,
       "stock": null,
@@ -136,10 +136,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
+      "id": "bol-9300000354327909",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "name": "asmodee pokemon box ex 30th 20 min kaartspel verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -153,18 +153,40 @@
       "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-30th",
+      "id": "amazon-be-B0H1WYD6P5",
       "shop": "amazon-be",
-      "name": "Amazon België — Pokémon 30th (search)",
-      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
-      "inStock": false,
-      "stock": 0,
-      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
+      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0GX1KCLRY",
+      "shop": "amazon-be",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0H2C6NJVJ",
+      "shop": "amazon-be",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -248,69 +270,36 @@
   ],
   "alerts": [
     {
-      "id": "truecollector-6657",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-przedsprzedaz-p-6657.html"
+      "id": "amazon-be-B0H1WYD6P5",
+      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
+      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
     },
     {
-      "id": "truecollector-6658",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-przedsprzedaz-p-6658.html"
+      "id": "amazon-be-B0GX1KCLRY",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY"
     },
     {
-      "id": "truecollector-6656",
-      "name": "Pokémon TCG: 30th Celebration - Binder Collection PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-binder-collection-przedsprzedaz-p-6656.html"
-    },
-    {
-      "id": "truecollector-6652",
-      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6652.html"
-    },
-    {
-      "id": "truecollector-6654",
-      "name": "Pokémon TCG: 30th Celebration - Poster Collection PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-poster-collection-przedsprzedaz-p-6654.html"
-    },
-    {
-      "id": "truecollector-6653",
-      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6653.html"
+      "id": "amazon-be-B0H2C6NJVJ",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ"
     }
   ],
   "notify": [
     {
-      "id": "truecollector-6657",
+      "id": "amazon-be-B0H1WYD6P5",
       "ntfy": true,
       "telegram": false,
       "errors": []
     },
     {
-      "id": "truecollector-6658",
+      "id": "amazon-be-B0GX1KCLRY",
       "ntfy": true,
       "telegram": false,
       "errors": []
     },
     {
-      "id": "truecollector-6656",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "truecollector-6652",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "truecollector-6654",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "truecollector-6653",
+      "id": "amazon-be-B0H2C6NJVJ",
       "ntfy": true,
       "telegram": false,
       "errors": []
