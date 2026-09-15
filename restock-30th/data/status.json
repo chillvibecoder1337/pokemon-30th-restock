@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-15T05:02:07.288Z",
+  "checkedAt": "2026-09-15T10:00:29.427Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,8 +127,19 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "name": "Pokémon 30th Anniversary Celebration",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -142,18 +153,40 @@
       "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-30th",
+      "id": "amazon-be-B0H1WYD6P5",
       "shop": "amazon-be",
-      "name": "Amazon België — Pokémon 30th (search)",
-      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
-      "inStock": false,
-      "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
+      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
+      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0GX1KCLRY",
+      "shop": "amazon-be",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0H2C6NJVJ",
+      "shop": "amazon-be",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -235,8 +268,43 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "amazon-be-B0H1WYD6P5",
+      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
+      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
+    },
+    {
+      "id": "amazon-be-B0GX1KCLRY",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY"
+    },
+    {
+      "id": "amazon-be-B0H2C6NJVJ",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ"
+    }
+  ],
+  "notify": [
+    {
+      "id": "amazon-be-B0H1WYD6P5",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-be-B0GX1KCLRY",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-be-B0H2C6NJVJ",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
