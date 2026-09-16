@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-16T16:46:51.617Z",
+  "checkedAt": "2026-09-16T19:44:20.730Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -138,7 +138,7 @@
     {
       "id": "bol-9300000272258854",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
@@ -147,10 +147,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338575681",
+      "id": "bol-9300000354327909",
       "shop": "bol",
-      "name": "Asmodee Pokémon Tin ex 30th (2) 20 min Kaartspel Verzamelen",
-      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
+      "name": "asmodee pokemon box ex 30th 20 min kaartspel verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -268,32 +268,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
