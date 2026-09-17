@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T15:02:10.890Z",
+  "checkedAt": "2026-09-17T18:57:59.816Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -61,8 +61,8 @@
     {
       "id": "truecollector-6657",
       "shop": "truecollector",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-przedsprzedaz-p-6657.html",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex Opening live",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-opening-live-p-6657.html",
       "inStock": false,
       "stock": null,
       "note": "Aktualnie niedostępny",
@@ -72,8 +72,8 @@
     {
       "id": "truecollector-6658",
       "shop": "truecollector",
-      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  PRZEDSPRZEDAŻ",
-      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-przedsprzedaz-p-6658.html",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  Opening live",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-opening-live-p-6658.html",
       "inStock": false,
       "stock": null,
       "note": "Aktualnie niedostępny",
@@ -127,7 +127,7 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
       "inStock": false,
       "stock": null,
@@ -138,7 +138,7 @@
     {
       "id": "bol-9300000354327909",
       "shop": "bol",
-      "name": "asmodee pokemon box ex 30th 20 min kaartspel verzamelen",
+      "name": "Shop 30th anniversary pokemon set - Amazon® Official Site",
       "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
@@ -147,21 +147,21 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0HH8M5KHP",
+      "id": "amazon-nl-30th",
       "shop": "amazon-nl",
-      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "name": "Amazon Nederland — Pokémon 30th (search)",
+      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
+      "inStock": false,
+      "stock": 0,
+      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "shop": "amazon-nl",
-      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
-      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
+      "id": "amazon-be-B0H8T1JGDG",
+      "shop": "amazon-be",
+      "name": "Pokémon TCG : Collection d&#x27;affiches 30e célébration (3 cartes promotionnelles, 1 affiche et 3 boosters)",
+      "url": "https://www.amazon.com.be/dp/B0H8T1JGDG",
       "inStock": false,
       "stock": null,
       "note": "Amazon listing — open for live stock",
@@ -169,10 +169,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0GX1KCLRY",
-      "shop": "amazon-nl",
-      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
-      "url": "https://www.amazon.nl/dp/B0GX1KCLRY",
+      "id": "amazon-be-B0H2C6NJVJ",
+      "shop": "amazon-be",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -180,13 +180,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-30th",
+      "id": "amazon-be-B0GX1KCLRY",
       "shop": "amazon-be",
-      "name": "Amazon België — Pokémon 30th (search)",
-      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
-      "inStock": false,
-      "stock": 0,
-      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -270,80 +270,25 @@
   ],
   "alerts": [
     {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
+      "id": "amazon-be-B0H2C6NJVJ",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ"
     },
     {
-      "id": "amazon-nl-B0GX1KCLRY",
-      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
-      "url": "https://www.amazon.nl/dp/B0GX1KCLRY"
-    },
-    {
-      "id": "panini-be-340835",
-      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html"
-    },
-    {
-      "id": "panini-be-340838",
-      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html"
-    },
-    {
-      "id": "panini-be-312326",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html"
-    },
-    {
-      "id": "panini-be-311536",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html"
-    },
-    {
-      "id": "panini-be-309096",
-      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html"
+      "id": "amazon-be-B0GX1KCLRY",
+      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
+      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY"
     }
   ],
   "notify": [
     {
-      "id": "amazon-nl-B0HH8M5KHP",
+      "id": "amazon-be-B0H2C6NJVJ",
       "ntfy": true,
       "telegram": false,
       "errors": []
     },
     {
-      "id": "amazon-nl-B0GX1KCLRY",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-340835",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-340838",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-312326",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-311536",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-309096",
+      "id": "amazon-be-B0GX1KCLRY",
       "ntfy": true,
       "telegram": false,
       "errors": []
