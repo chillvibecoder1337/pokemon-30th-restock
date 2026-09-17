@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-16T22:22:14.187Z",
+  "checkedAt": "2026-09-17T00:42:36.385Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -136,10 +136,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
+      "id": "bol-9300000338575681",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "name": "asmodee pokemon tin ex 30th 20 min kaartspel verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -147,10 +147,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338575681",
+      "id": "bol-9300000272258854",
       "shop": "bol",
-      "name": "Asmodee Pokémon Tin ex 30th (2) 20 min Kaartspel Verzamelen",
-      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -165,17 +165,6 @@
       "inStock": false,
       "stock": 0,
       "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
