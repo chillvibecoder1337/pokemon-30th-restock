@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T18:57:59.816Z",
+  "checkedAt": "2026-09-17T21:52:21.548Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,8 +127,19 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -138,7 +149,7 @@
     {
       "id": "bol-9300000354327909",
       "shop": "bol",
-      "name": "Shop 30th anniversary pokemon set - Amazon® Official Site",
+      "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
       "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
@@ -154,17 +165,6 @@
       "inStock": false,
       "stock": 0,
       "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG : Collection d&#x27;affiches 30e célébration (3 cartes promotionnelles, 1 affiche et 3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0H8T1JGDG",
-      "inStock": false,
-      "stock": null,
-      "note": "Amazon listing — open for live stock",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -268,32 +268,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
