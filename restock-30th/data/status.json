@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T10:13:17.644Z",
+  "checkedAt": "2026-09-17T15:02:10.890Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -136,10 +136,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
+      "id": "bol-9300000354327909",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "name": "asmodee pokemon box ex 30th 20 min kaartspel verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -147,35 +147,46 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338575681",
-      "shop": "bol",
-      "name": "asmodee pokemon tin ex 30th 20 min kaartspel verzamelen",
-      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-nl-30th",
+      "id": "amazon-nl-B0HH8M5KHP",
       "shop": "amazon-nl",
-      "name": "Amazon Nederland — Pokémon 30th (search)",
-      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
-      "inStock": false,
-      "stock": 0,
-      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
+      "inStock": false,
+      "stock": null,
+      "note": "Amazon listing — open for live stock",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "shop": "amazon-nl",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-30th",
+      "shop": "amazon-be",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
+      "inStock": false,
+      "stock": 0,
+      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -202,19 +213,142 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "panini-be-wc",
+      "id": "panini-be-340835",
       "shop": "panini-be",
-      "name": "Panini België — FIFA World Cup 2026",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html",
-      "inStock": false,
-      "stock": 0,
-      "note": "No FIFA World Cup 2026 listings on Panini Belgium yet",
+      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Panini.be: te koop",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-340838",
+      "shop": "panini-be",
+      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Panini.be: te koop",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-312326",
+      "shop": "panini-be",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Panini.be: te koop",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-311536",
+      "shop": "panini-be",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Panini.be: te koop",
+      "error": null,
+      "section": "fifa-wc"
+    },
+    {
+      "id": "panini-be-309096",
+      "shop": "panini-be",
+      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html",
+      "inStock": true,
+      "stock": null,
+      "note": "Panini.be: te koop",
       "error": null,
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY"
+    },
+    {
+      "id": "panini-be-340835",
+      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html"
+    },
+    {
+      "id": "panini-be-340838",
+      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html"
+    },
+    {
+      "id": "panini-be-312326",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html"
+    },
+    {
+      "id": "panini-be-311536",
+      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html"
+    },
+    {
+      "id": "panini-be-309096",
+      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html"
+    }
+  ],
+  "notify": [
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "panini-be-340835",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "panini-be-340838",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "panini-be-312326",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "panini-be-311536",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "panini-be-309096",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
