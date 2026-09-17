@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T05:28:03.176Z",
+  "checkedAt": "2026-09-17T10:13:17.644Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -136,9 +136,20 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "bol-9300000338575681",
       "shop": "bol",
-      "name": "Asmodee Pokémon Tin ex 30th (2) 20 min Kaartspel Verzamelen",
+      "name": "asmodee pokemon tin ex 30th 20 min kaartspel verzamelen",
       "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
       "inStock": false,
       "stock": null,
@@ -147,46 +158,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0H8T1JGDG",
+      "id": "amazon-nl-30th",
       "shop": "amazon-nl",
-      "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
-      "url": "https://www.amazon.nl/dp/B0H8T1JGDG",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "shop": "amazon-nl",
-      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "shop": "amazon-nl",
-      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
-      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG : Collection d&#x27;affiches 30e célébration (3 cartes promotionnelles, 1 affiche et 3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0H8T1JGDG",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "name": "Amazon Nederland — Pokémon 30th (search)",
+      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
+      "inStock": false,
+      "stock": 0,
+      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -224,109 +202,19 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "panini-be-340835",
+      "id": "panini-be-wc",
       "shop": "panini-be",
-      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html",
-      "inStock": true,
-      "stock": null,
-      "note": "Panini.be: te koop",
-      "error": null,
-      "section": "fifa-wc"
-    },
-    {
-      "id": "panini-be-340838",
-      "shop": "panini-be",
-      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html",
-      "inStock": true,
-      "stock": null,
-      "note": "Panini.be: te koop",
-      "error": null,
-      "section": "fifa-wc"
-    },
-    {
-      "id": "panini-be-312326",
-      "shop": "panini-be",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html",
-      "inStock": true,
-      "stock": null,
-      "note": "Panini.be: te koop",
-      "error": null,
-      "section": "fifa-wc"
-    },
-    {
-      "id": "panini-be-311536",
-      "shop": "panini-be",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html",
-      "inStock": true,
-      "stock": null,
-      "note": "Panini.be: te koop",
-      "error": null,
-      "section": "fifa-wc"
-    },
-    {
-      "id": "panini-be-309096",
-      "shop": "panini-be",
-      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html",
-      "inStock": true,
-      "stock": null,
-      "note": "Panini.be: te koop",
+      "name": "Panini België — FIFA World Cup 2026",
+      "url": "https://www.paninibelgium.com/shp_bel_nl/panini-stickers/sport/fifa-world-cup.html",
+      "inStock": false,
+      "stock": 0,
+      "note": "No FIFA World Cup 2026 listings on Panini Belgium yet",
       "error": null,
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-nl-B0H8T1JGDG",
-      "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
-      "url": "https://www.amazon.nl/dp/B0H8T1JGDG"
-    },
-    {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
-    },
-    {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
-      "url": "https://www.amazon.nl/dp/B0HDBHRSGX"
-    },
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "name": "Pokémon TCG : Collection d&#x27;affiches 30e célébration (3 cartes promotionnelles, 1 affiche et 3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0H8T1JGDG"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-nl-B0H8T1JGDG",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-nl-B0HH8M5KHP",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-nl-B0HDBHRSGX",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
