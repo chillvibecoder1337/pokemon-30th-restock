@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-18T21:03:51.458Z",
+  "checkedAt": "2026-09-18T23:14:05.206Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -125,13 +125,68 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-30th",
+      "id": "bol-9300000338546140",
       "shop": "bol",
-      "name": "Bol.com — Pokémon 30th (search)",
-      "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
+      "name": "Pokémon TCG: 30th Anniversary - Elite Trainer Box | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-elite-trainer-box/9300000338546140/",
       "inStock": false,
-      "stock": 0,
-      "note": "Bol blocked bots (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th). No 30th product URLs in the search index this round",
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000338546137",
+      "shop": "bol",
+      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-poster-coll-30th-20-min-kaartspel-verzamelen/9300000338546137/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000338546141",
+      "shop": "bol",
+      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000354327909",
+      "shop": "bol",
+      "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000273455325",
+      "shop": "bol",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -147,35 +202,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H1WYD6P5",
+      "id": "amazon-be-30th",
       "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
-      "stock": null,
-      "note": "Amazon listing — open for live stock",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "shop": "amazon-be",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "stock": 0,
+      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
