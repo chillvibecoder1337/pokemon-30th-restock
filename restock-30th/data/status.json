@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-19T23:08:06.291Z",
+  "checkedAt": "2026-09-20T01:02:09.519Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -180,46 +180,46 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-30th",
+      "id": "amazon-nl-B0HH8M5KHP",
       "shop": "amazon-nl",
-      "name": "Amazon Nederland — Pokémon 30th (search)",
-      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "shop": "amazon-nl",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
+      "inStock": false,
+      "stock": null,
+      "note": "Amazon listing — open for live stock",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-30th",
+      "shop": "amazon-be",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H2C6NJVJ",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0HDBHRSGX",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "shop": "amazon-be",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "note": "No Pokémon 30th listings found on Amazon BE yet (search scraped)",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -301,8 +301,32 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY"
+    }
+  ],
+  "notify": [
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
