@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-20T21:52:51.254Z",
+  "checkedAt": "2026-09-20T23:40:49.015Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -136,32 +136,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
-      "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "bol-9300000338546137",
       "shop": "bol",
       "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000354327909",
-      "shop": "bol",
-      "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
-      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -180,10 +158,32 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338575681",
+      "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Asmodee Pokémon Tin ex 30th (2) 20 min Kaartspel Verzamelen",
-      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tin-ex-30th-20-min-kaartspel-verzamelen/9300000338575681/",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000354327909",
+      "shop": "bol",
+      "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "bol-9300000272258854",
+      "shop": "bol",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -235,10 +235,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0HDBHRSGX",
+      "id": "amazon-be-B0H2C6NJVJ",
       "shop": "amazon-be",
-      "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
+      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
+      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -246,10 +246,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H2C6NJVJ",
+      "id": "amazon-be-B0HDBHRSGX",
       "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
+      "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
+      "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -345,65 +345,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "panini-be-340835",
-      "name": "FIFA World Cup 2026™ Official Winner Poster – Complete Set Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-winner-poster-complete-set-panini-005763wpcsexp-be01.html"
-    },
-    {
-      "id": "panini-be-340838",
-      "name": "FIFA World Cup 2026™ Official 1970-2026 – Panini Football Collection",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-1970-2026-panini-football-collection-004559aintwc26-be01.html"
-    },
-    {
-      "id": "panini-be-312326",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - 1 Album soft cover + 2 Boxes van 50 zakjes Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-1-album-soft-cover-2-boxes-van-50-zakjes-panini-bundle005460box100a-be01.html"
-    },
-    {
-      "id": "panini-be-311536",
-      "name": "FIFA WORLD CUP 2026™ Official Sticker Collection - Album Soft cover Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-official-sticker-collection-album-soft-cover-panini-005460abe-be01.html"
-    },
-    {
-      "id": "panini-be-309096",
-      "name": "FIFA World Cup 2026™ Adrenalyn XL™ - Premium Gold Trading Cards Panini",
-      "url": "https://www.paninibelgium.com/shp_bel_nl/fifa-world-cup-2026-adrenalyn-xl-premium-gold-trading-cards-panini-005461b1proro-be01.html"
-    }
-  ],
-  "notify": [
-    {
-      "id": "panini-be-340835",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-340838",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-312326",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-311536",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "panini-be-309096",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
