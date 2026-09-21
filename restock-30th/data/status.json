@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-20T23:40:49.015Z",
+  "checkedAt": "2026-09-21T01:39:39.018Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -125,10 +125,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338546140",
+      "id": "bol-9300000338546137",
       "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Elite Trainer Box | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-elite-trainer-box/9300000338546140/",
+      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -136,10 +136,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338546137",
+      "id": "bol-9300000338546140",
       "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
+      "name": "Pokémon TCG: 30th Anniversary - Elite Trainer Box | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-elite-trainer-box/9300000338546140/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -173,17 +173,6 @@
       "shop": "bol",
       "name": "Asmodee Pokémon Box ex 30th (2) 20 min Kaartspel Verzamelen",
       "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000272258854",
-      "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -235,35 +224,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H2C6NJVJ",
+      "id": "amazon-be-30th",
       "shop": "amazon-be",
-      "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
-      "url": "https://www.amazon.com.be/dp/B0H2C6NJVJ",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0HDBHRSGX",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
-      "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0GX1KCLRY",
-      "shop": "amazon-be",
-      "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
-      "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
+      "name": "Amazon België — Pokémon 30th (search)",
+      "url": "https://www.amazon.com.be/s?k=pokemon+30th+celebration",
+      "inStock": false,
+      "stock": 0,
+      "note": "Amazon BE blocked bots (HTTP 503 for https://www.amazon.com.be/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
