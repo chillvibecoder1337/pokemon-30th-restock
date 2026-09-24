@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-23T23:57:00.295Z",
+  "checkedAt": "2026-09-24T02:16:54.492Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -125,17 +125,6 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000338546141",
-      "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "bol-9300000338546137",
       "shop": "bol",
       "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
@@ -169,10 +158,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
+      "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "name": "Shop 30th anniversary pokemon set - Amazon.com Official Site",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -356,21 +345,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0H8T1JGDG"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-be-B0H8T1JGDG",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
