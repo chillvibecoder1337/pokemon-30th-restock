@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-25T17:13:49.364Z",
+  "checkedAt": "2026-09-25T20:31:02.293Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,7 +127,7 @@
     {
       "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
+      "name": "30th Anniversary Pokemon - Buy Celebration Pokemon Box On eBay",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
       "inStock": false,
       "stock": null,
@@ -160,7 +160,7 @@
     {
       "id": "bol-9300000272258854",
       "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
@@ -202,10 +202,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H9HBQKF3",
+      "id": "amazon-be-B0H99Z9XPG",
       "shop": "amazon-be",
-      "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
-      "url": "https://www.amazon.com.be/dp/B0H9HBQKF3",
+      "name": "Pokémon: Collection avec classeur de l&#x27;extension 30e anniversaire du JCC Pokémon (1 classeur et 5 boosters d&#x27;extension), édition en italien",
+      "url": "https://www.amazon.com.be/dp/B0H99Z9XPG",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -213,10 +213,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H1WYD6P5",
+      "id": "amazon-be-B0H9HBQKF3",
       "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
+      "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
+      "url": "https://www.amazon.com.be/dp/B0H9HBQKF3",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -246,6 +246,17 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "amazon-be-B0H82Z5XX1",
+      "shop": "amazon-be",
+      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
+      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "amazon-be-B0H2C6NJVJ",
       "shop": "amazon-be",
       "name": "Pokémon TCG Chinese 30e verjaardag viering eerste partner vol. 1",
@@ -257,10 +268,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H82Z5XX1",
+      "id": "amazon-be-B0GV83VVLM",
       "shop": "amazon-be",
-      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
-      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
+      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
+      "url": "https://www.amazon.com.be/dp/B0GV83VVLM",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -389,8 +400,32 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "amazon-be-B0H99Z9XPG",
+      "name": "Pokémon: Collection avec classeur de l&#x27;extension 30e anniversaire du JCC Pokémon (1 classeur et 5 boosters d&#x27;extension), édition en italien",
+      "url": "https://www.amazon.com.be/dp/B0H99Z9XPG"
+    },
+    {
+      "id": "amazon-be-B0GV83VVLM",
+      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
+      "url": "https://www.amazon.com.be/dp/B0GV83VVLM"
+    }
+  ],
+  "notify": [
+    {
+      "id": "amazon-be-B0H99Z9XPG",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-be-B0GV83VVLM",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
