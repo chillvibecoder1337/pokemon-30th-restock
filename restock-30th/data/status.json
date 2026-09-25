@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-25T12:11:44.177Z",
+  "checkedAt": "2026-09-25T17:13:49.364Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,19 +127,8 @@
     {
       "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "30th Anniversary Pokemon - Celebration Pokemon Box on eBay",
+      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000338546137",
-      "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -160,7 +149,7 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
       "inStock": false,
       "stock": null,
@@ -191,17 +180,6 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H9HFPRRD",
-      "shop": "amazon-be",
-      "name": "Pokémon: Trainerspel van hoge klasse 30e verjaardag van het Pokémon TCG (1 volledige promokaart, 9 uitbreidingsboosters en premium accessoires), Italiaanse editie",
-      "url": "https://www.amazon.com.be/dp/B0H9HFPRRD",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "amazon-be-B0H8SV3WJ8",
       "shop": "amazon-be",
       "name": "Pokémon TCG : Coffret Dresseur Elite 30th Celebration (1 carte promotionnelle Full-Art, 9 boosters et accessoires Premium)",
@@ -224,10 +202,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H99Z9XPG",
+      "id": "amazon-be-B0H9HBQKF3",
       "shop": "amazon-be",
-      "name": "Pokémon: Collection avec classeur de l&#x27;extension 30e anniversaire du JCC Pokémon (1 classeur et 5 boosters d&#x27;extension), édition en italien",
-      "url": "https://www.amazon.com.be/dp/B0H99Z9XPG",
+      "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
+      "url": "https://www.amazon.com.be/dp/B0H9HBQKF3",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -257,32 +235,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H9HBQKF3",
-      "shop": "amazon-be",
-      "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
-      "url": "https://www.amazon.com.be/dp/B0H9HBQKF3",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "amazon-be-B0HDBHRSGX",
       "shop": "amazon-be",
       "name": "Pokémon TCG 30th Anniversary Original Partner Card Set Vol.2 Vereenvoudigd Chinees",
       "url": "https://www.amazon.com.be/dp/B0HDBHRSGX",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-be-B0H82Z5XX1",
-      "shop": "amazon-be",
-      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
-      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -301,10 +257,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0GV83VVLM",
+      "id": "amazon-be-B0H82Z5XX1",
       "shop": "amazon-be",
-      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
-      "url": "https://www.amazon.com.be/dp/B0GV83VVLM",
+      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
+      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -433,54 +389,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-be-B0H99Z9XPG",
-      "name": "Pokémon: Collection avec classeur de l&#x27;extension 30e anniversaire du JCC Pokémon (1 classeur et 5 boosters d&#x27;extension), édition en italien",
-      "url": "https://www.amazon.com.be/dp/B0H99Z9XPG"
-    },
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
-    },
-    {
-      "id": "amazon-be-B0H9HBQKF3",
-      "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
-      "url": "https://www.amazon.com.be/dp/B0H9HBQKF3"
-    },
-    {
-      "id": "amazon-be-B0GV83VVLM",
-      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
-      "url": "https://www.amazon.com.be/dp/B0GV83VVLM"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-be-B0H99Z9XPG",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0H1WYD6P5",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0H9HBQKF3",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-be-B0GV83VVLM",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
