@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-26T11:45:42.170Z",
+  "checkedAt": "2026-09-26T15:07:45.830Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,7 +127,7 @@
     {
       "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "30th Celebration Cards - Pokemon Center Official Site",
+      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
       "inStock": false,
       "stock": null,
@@ -147,31 +147,9 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000273455325",
-      "shop": "bol",
-      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000338546137",
-      "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "bol-9300000272258854",
       "shop": "bol",
-      "name": "Pokémon first Partner illustration collection - 30th Anniversary ...",
+      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
       "inStock": false,
       "stock": null,
@@ -186,7 +164,7 @@
       "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
       "inStock": false,
       "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
+      "note": "Amazon NL blocked bots (HTTP 503 for https://www.amazon.nl/s?k=pokemon+30th+celebration). No 30th product URLs in the search index this round",
       "error": null,
       "section": "pokemon-30th"
     },
