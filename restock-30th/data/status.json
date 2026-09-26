@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-26T01:45:07.268Z",
+  "checkedAt": "2026-09-26T06:39:44.800Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,19 +127,8 @@
     {
       "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
+      "name": "30th Anniversary Pokemon - Celebration Pokemon Box on eBay",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000338546137",
-      "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Poster Collection | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-poster-collection/9300000338546137/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -150,7 +139,7 @@
       "id": "bol-9300000354327909",
       "shop": "bol",
       "name": "Pokemon 30th Anniversary Ex Box | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-30th-anniversary-ex-box/9300000354327909/",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-box-ex-30th-20-min-kaartspel-verzamelen/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -160,7 +149,7 @@
     {
       "id": "bol-9300000273455325",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn 8 pack",
+      "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
       "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn-8-pack/9300000273455325/",
       "inStock": false,
       "stock": null,
@@ -180,13 +169,79 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-30th",
+      "id": "amazon-nl-B0H8T1JGDG",
       "shop": "amazon-nl",
-      "name": "Amazon Nederland — Pokémon 30th (search)",
-      "url": "https://www.amazon.nl/s?k=pokemon+30th+celebration",
-      "inStock": false,
-      "stock": 0,
-      "note": "No Pokémon 30th listings found on Amazon NL yet (search scraped)",
+      "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
+      "url": "https://www.amazon.nl/dp/B0H8T1JGDG",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0H8SV3WJ8",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG: 30e Celebration Elite Trainer Box (1 Full-Art Promo Card, 9 Booster Packs & Premium Accessoires)",
+      "url": "https://www.amazon.nl/dp/B0H8SV3WJ8",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "shop": "amazon-nl",
+      "name": "Pokemon 30-jarig jubileum eerste partnerkaartenset Vol. 2 (Chinees)",
+      "url": "https://www.amazon.nl/dp/B0H82Z5XX1",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "shop": "amazon-nl",
+      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
+      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "shop": "amazon-nl",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "shop": "amazon-nl",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "shop": "amazon-nl",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -213,6 +268,17 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "amazon-be-B0H1WYD6P5",
+      "shop": "amazon-be",
+      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
+      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "amazon-be-B0H9HBQKF3",
       "shop": "amazon-be",
       "name": "Pokémon: Greninja-ex collectie van de 30e verjaardag uitbreiding van het Pokémon TCG (1 holografische promokaart, 1 enorme holografische kaart en 4 uitbreidingsboosters), Italiaanse editie",
@@ -224,13 +290,13 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H1WYD6P5",
+      "id": "amazon-be-B0H99Z9XPG",
       "shop": "amazon-be",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5",
-      "inStock": true,
+      "name": "Pokémon: Collection avec classeur de l&#x27;extension 30e anniversaire du JCC Pokémon (1 classeur et 5 boosters d&#x27;extension), édition en italien",
+      "url": "https://www.amazon.com.be/dp/B0H99Z9XPG",
+      "inStock": false,
       "stock": null,
-      "note": "Amazon search: op voorraad",
+      "note": "Amazon listing — open for live stock",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -402,14 +468,80 @@
   ],
   "alerts": [
     {
-      "id": "amazon-be-B0H1WYD6P5",
-      "name": "10 ETB Pokémon Premium transparante PET-beschermers, compatibel met Elite Trainer Box, viering 30 jaar Pokémon, Elite Trainer Box",
-      "url": "https://www.amazon.com.be/dp/B0H1WYD6P5"
+      "id": "amazon-nl-B0H8T1JGDG",
+      "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
+      "url": "https://www.amazon.nl/dp/B0H8T1JGDG"
+    },
+    {
+      "id": "amazon-nl-B0H8SV3WJ8",
+      "name": "Pokémon TCG: 30e Celebration Elite Trainer Box (1 Full-Art Promo Card, 9 Booster Packs & Premium Accessoires)",
+      "url": "https://www.amazon.nl/dp/B0H8SV3WJ8"
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "name": "Pokemon 30-jarig jubileum eerste partnerkaartenset Vol. 2 (Chinees)",
+      "url": "https://www.amazon.nl/dp/B0H82Z5XX1"
+    },
+    {
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
+      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ"
+    },
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP"
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "name": "Pokémon TCG 30th Anniversary originele partnerkaartenset, Vol.2, vereenvoudigd Chinees",
+      "url": "https://www.amazon.nl/dp/B0HDBHRSGX"
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
+      "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
+      "url": "https://www.amazon.nl/dp/B0GX1KCLRY"
     }
   ],
   "notify": [
     {
-      "id": "amazon-be-B0H1WYD6P5",
+      "id": "amazon-nl-B0H8T1JGDG",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0H8SV3WJ8",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0H82Z5XX1",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0H2C6NJVJ",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0HH8M5KHP",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0HDBHRSGX",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    },
+    {
+      "id": "amazon-nl-B0GX1KCLRY",
       "ntfy": true,
       "telegram": false,
       "errors": []
