@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-28T01:41:20.555Z",
+  "checkedAt": "2026-09-28T07:41:23.227Z",
   "ok": true,
   "errors": [],
   "items": [
@@ -127,30 +127,8 @@
     {
       "id": "bol-9300000338546141",
       "shop": "bol",
-      "name": "Pokémon TCG: 30th Anniversary - Binder Collection | Games | bol",
+      "name": "30th Celebration Pokémon Cards",
       "url": "https://www.bol.com/nl/nl/p/pokemon-tcg-30th-anniversary-binder-collection/9300000338546141/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000389674722",
-      "shop": "bol",
-      "name": "Pokemon 30th Celebration Booster Box | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-30th-celebration-booster-box/9300000389674722/",
-      "inStock": false,
-      "stock": null,
-      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "bol-9300000354327909",
-      "shop": "bol",
-      "name": "Pokemon 30th Anniversary Ex Box | Games | bol",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-30th-anniversary-ex-box/9300000354327909/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -169,6 +147,17 @@
       "section": "pokemon-30th"
     },
     {
+      "id": "bol-9300000354327909",
+      "shop": "bol",
+      "name": "Pokemon 30th Anniversary Ex Box | Games | bol",
+      "url": "https://www.bol.com/nl/nl/p/pokemon-30th-anniversary-ex-box/9300000354327909/",
+      "inStock": false,
+      "stock": null,
+      "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
       "id": "bol-9300000273455325",
       "shop": "bol",
       "name": "Pokemon First Partner Illustration Collection - 30th Anniversary ...",
@@ -180,10 +169,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "bol-9300000272258854",
+      "id": "bol-9300000338575679",
       "shop": "bol",
-      "name": "pokemon first partner illustration collection 30th anniversary celebration chn",
-      "url": "https://www.bol.com/nl/nl/p/pokemon-first-partner-illustration-collection-30th-anniversary-celebration-chn/9300000272258854/",
+      "name": "asmodee pokemon tech sticker coll 30th 20 min kaartspel verzamelen",
+      "url": "https://www.bol.com/nl/nl/p/asmodee-pokemon-tech-sticker-coll-30th-20-min-kaartspel-verzamelen/9300000338575679/",
       "inStock": false,
       "stock": null,
       "note": "Found via search — Bol blocks bot stock checks; open the page (HTTP 403 for https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th)",
@@ -246,10 +235,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0HH8M5KHP",
+      "id": "amazon-nl-B0H2C6NJVJ",
       "shop": "amazon-nl",
-      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
-      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
+      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
+      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -257,10 +246,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0H2C6NJVJ",
+      "id": "amazon-nl-B0HH8M5KHP",
       "shop": "amazon-nl",
-      "name": "Pokemon TCG Chinese 30e verjaardag viering eerste partner volperiod 1",
-      "url": "https://www.amazon.nl/dp/B0H2C6NJVJ",
+      "name": "Bundel van BBTT Verzendbescherming & Pokemon 30th Celebration First Partner Special Illustration Card Set Vol. 3 - Chinees",
+      "url": "https://www.amazon.nl/dp/B0HH8M5KHP",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -279,32 +268,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-nl-B0GV83VVLM",
-      "shop": "amazon-nl",
-      "name": "Pokémon-verzamelkaartspel | First Partner Holo-kaartenset | deel 1 | 30e verjaardag | Chinees | Voor verzamelaars vanaf 15 jaar",
-      "url": "https://www.amazon.nl/dp/B0GV83VVLM",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "amazon-nl-B0GX1KCLRY",
       "shop": "amazon-nl",
       "name": "Bundel van BB-Toy-Trades Toploader & Pokemon 30e verjaardag eerste partner speciale illustratie kaartset Vol. 1 Chinees NIEUW & OVP",
       "url": "https://www.amazon.nl/dp/B0GX1KCLRY",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
-      "id": "amazon-nl-B0HFSS86MC",
-      "shop": "amazon-nl",
-      "name": "Pokemon 30th Anniversary First Partner Card Set Vol. 3 Chinees",
-      "url": "https://www.amazon.nl/dp/B0HFSS86MC",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -400,17 +367,6 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0HKWK9HYS",
-      "shop": "amazon-be",
-      "name": "BBTT Verzendbescherming Pokémon 30e verjaardag Chinees muntspel (3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0HKWK9HYS",
-      "inStock": true,
-      "stock": null,
-      "note": "Amazon search: op voorraad",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "amazon-be-B0H82Z5XX1",
       "shop": "amazon-be",
       "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
@@ -426,6 +382,17 @@
       "shop": "amazon-be",
       "name": "BB-Toy-Trades Toploader en Pokémon-kaarten, 30e verjaardag, 1e partner, speciale illustratie, vol. 1 Chinees",
       "url": "https://www.amazon.com.be/dp/B0GX1KCLRY",
+      "inStock": true,
+      "stock": null,
+      "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0GV83VVLM",
+      "shop": "amazon-be",
+      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
+      "url": "https://www.amazon.com.be/dp/B0GV83VVLM",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -543,8 +510,21 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [],
-  "notify": [],
+  "alerts": [
+    {
+      "id": "amazon-be-B0GV83VVLM",
+      "name": "Jeu de cartes à collectionner Pokémon | First Partner Holo Card Set | Vol 1 | 30e anniversaire | Chinois | Pour les collectionneurs de 15 ans et plus",
+      "url": "https://www.amazon.com.be/dp/B0GV83VVLM"
+    }
+  ],
+  "notify": [
+    {
+      "id": "amazon-be-B0GV83VVLM",
+      "ntfy": true,
+      "telegram": false,
+      "errors": []
+    }
+  ],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
