@@ -1,9 +1,7 @@
 {
-  "checkedAt": "2026-09-27T23:11:45.564Z",
-  "ok": false,
-  "errors": [
-    "truecollector-30th: TrueCollector anti-bot wait page; try again later"
-  ],
+  "checkedAt": "2026-09-28T01:41:20.555Z",
+  "ok": true,
+  "errors": [],
   "items": [
     {
       "id": "aw2-30th",
@@ -28,14 +26,102 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "truecollector-30th",
+      "id": "truecollector-6655",
       "shop": "truecollector",
-      "name": "TrueCollector — Pokémon 30th Celebration",
-      "url": "https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html",
+      "name": "Pokémon TCG: 30th Celebration - 2-Pack PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-2-pack-przedsprzedaz-p-6655.html",
       "inStock": false,
       "stock": null,
-      "note": "Check failed",
-      "error": "TrueCollector anti-bot wait page; try again later",
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6651",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Booster Bundle PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-booster-bundle-przedsprzedaz-p-6651.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6659",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Mini Tin - MIX Display (10) PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-mini-tin-mix-display-10-przedsprzedaz-p-6659.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6656",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Binder Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-binder-collection-przedsprzedaz-p-6656.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6654",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Poster Collection PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-poster-collection-przedsprzedaz-p-6654.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6652",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6652.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6657",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Greninja ex Opening live",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-greninja-ex-opening-live-p-6657.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6658",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Ex Box - Sylveon ex  Opening live",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-ex-box-sylveon-ex-opening-live-p-6658.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "truecollector-6653",
+      "shop": "truecollector",
+      "name": "Pokémon TCG: 30th Celebration - Tin - Greninja ex PRZEDSPRZEDAŻ",
+      "url": "https://www.truecollector.pl/pokmon-tcg-30th-celebration-tin-greninja-ex-przedsprzedaz-p-6653.html",
+      "inStock": false,
+      "stock": null,
+      "note": "Aktualnie niedostępny",
+      "error": null,
       "section": "pokemon-30th"
     },
     {
@@ -226,17 +312,6 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H8SV3WJ8",
-      "shop": "amazon-be",
-      "name": "Pokémon TCG: Elite 30th Celebration Trainer Box (1 full-art promokaart, 9 boosters en premium accessoires)",
-      "url": "https://www.amazon.com.be/dp/B0H8SV3WJ8",
-      "inStock": false,
-      "stock": null,
-      "note": "Amazon listing — open for live stock",
-      "error": null,
-      "section": "pokemon-30th"
-    },
-    {
       "id": "amazon-be-B0H8T1JGDG",
       "shop": "amazon-be",
       "name": "Pokémon TCG: 30e viering postercollectie (3 promotiekaarten, 1 poster en 3 boosters)",
@@ -255,6 +330,17 @@
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
+      "error": null,
+      "section": "pokemon-30th"
+    },
+    {
+      "id": "amazon-be-B0H8SV3WJ8",
+      "shop": "amazon-be",
+      "name": "Pokémon TCG: Elite 30th Celebration Trainer Box (1 full-art promokaart, 9 boosters en premium accessoires)",
+      "url": "https://www.amazon.com.be/dp/B0H8SV3WJ8",
+      "inStock": false,
+      "stock": null,
+      "note": "Amazon listing — open for live stock",
       "error": null,
       "section": "pokemon-30th"
     },
@@ -314,10 +400,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0H82Z5XX1",
+      "id": "amazon-be-B0HKWK9HYS",
       "shop": "amazon-be",
-      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
-      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
+      "name": "BBTT Verzendbescherming Pokémon 30e verjaardag Chinees muntspel (3 boosters)",
+      "url": "https://www.amazon.com.be/dp/B0HKWK9HYS",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -325,10 +411,10 @@
       "section": "pokemon-30th"
     },
     {
-      "id": "amazon-be-B0HKWK9HYS",
+      "id": "amazon-be-B0H82Z5XX1",
       "shop": "amazon-be",
-      "name": "BBTT Protection d&#x27;expédition Pokémon 30e anniversaire Jeu de pièces chinoises (3 boosters)",
-      "url": "https://www.amazon.com.be/dp/B0HKWK9HYS",
+      "name": "Pokémon 30e verjaardag eerste partner vol. 2 kaarten (Chinees)",
+      "url": "https://www.amazon.com.be/dp/B0H82Z5XX1",
       "inStock": true,
       "stock": null,
       "note": "Amazon search: op voorraad",
@@ -457,32 +543,8 @@
       "section": "fifa-wc"
     }
   ],
-  "alerts": [
-    {
-      "id": "amazon-nl-B0GV83VVLM",
-      "name": "Pokémon-verzamelkaartspel | First Partner Holo-kaartenset | deel 1 | 30e verjaardag | Chinees | Voor verzamelaars vanaf 15 jaar",
-      "url": "https://www.amazon.nl/dp/B0GV83VVLM"
-    },
-    {
-      "id": "amazon-nl-B0HFSS86MC",
-      "name": "Pokemon 30th Anniversary First Partner Card Set Vol. 3 Chinees",
-      "url": "https://www.amazon.nl/dp/B0HFSS86MC"
-    }
-  ],
-  "notify": [
-    {
-      "id": "amazon-nl-B0GV83VVLM",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    },
-    {
-      "id": "amazon-nl-B0HFSS86MC",
-      "ntfy": true,
-      "telegram": false,
-      "errors": []
-    }
-  ],
+  "alerts": [],
+  "notify": [],
   "github": {
     "actionsUrl": "https://github.com/chillvibecoder1337/pokemon-30th-restock/actions/workflows/restock-check.yml"
   }
