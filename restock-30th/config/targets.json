@@ -10,7 +10,7 @@
       "label": "AW2 — Pokémon 30th (catalog scan)",
       "url": "https://aw2spzoo.com/",
       "apiUrl": "https://aw2spzoo.com/api/products",
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "cardland-30th",
@@ -18,8 +18,13 @@
       "label": "Cardland — Pokémon 30th (search)",
       "url": "https://www.cardland.se/en/shop/search?s=30th",
       "categoryUrl": "https://www.cardland.se/en/pokemon",
-      "searchQueries": ["30th", "pokemon 30th", "30th celebration", "30 year"],
-      "enabled": true
+      "searchQueries": [
+        "30th",
+        "pokemon 30th",
+        "30th celebration",
+        "30 year"
+      ],
+      "enabled": false
     },
     {
       "id": "truecollector-30th",
@@ -27,15 +32,19 @@
       "label": "TrueCollector — Pokémon 30th Celebration",
       "url": "https://www.truecollector.pl/pokemon-30th-celebration-c-1_77.html",
       "match": "30th|celebration",
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "bol-30th",
       "shop": "bol",
       "label": "Bol.com — Pokémon 30th (search)",
       "url": "https://www.bol.com/nl/nl/s/?searchtext=pokemon+30th",
-      "searchQueries": ["pokemon 30th celebration", "pokemon 30th", "pokemon 30 jaar"],
-      "enabled": true
+      "searchQueries": [
+        "pokemon 30th celebration",
+        "pokemon 30th",
+        "pokemon 30 jaar"
+      ],
+      "enabled": false
     },
     {
       "id": "amazon-nl-30th",
@@ -49,7 +58,7 @@
         "pokemon 30 jaar",
         "pokemon 30e verjaardag"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "amazon-be-30th",
@@ -63,7 +72,7 @@
         "pokemon 30 jaar",
         "pokemon 30e verjaardag"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "catchyourcards-30th",
@@ -75,7 +84,7 @@
         "pokemon 30th",
         "pokemon 30 jaar"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "dreamland-be-30th",
@@ -88,7 +97,7 @@
         "pokemon 30th anniversary",
         "pokemon 30 jaar"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "id": "panini-be-wc",
